@@ -1,0 +1,18 @@
+#ifndef PROTOGLOBAL_H
+#define PROTOGLOBAL_H
+
+#include <QtCore/QtGlobal>
+
+#ifdef BUILDSYS_SHARED_LIBS
+#  ifdef BUILDSYS_PROTO_SOURCE
+#    define BUILDSYS_PROTO_DECL Q_DECL_EXPORT
+#  else
+#    define BUILDSYS_PROTO_DECL Q_DECL_IMPORT
+#  endif // BUILDSYS_PROTO_SOURCE
+#endif // BUILDSYS_SHARED_LIBS
+
+#ifndef BUILDSYS_PROTO_DECL
+#  define BUILDSYS_PROTO_DECL
+#endif
+
+#endif // PROTOGLOBAL_H

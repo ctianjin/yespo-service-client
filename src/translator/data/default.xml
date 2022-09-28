@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<preferences>
+    <application>
+		<host value="www.yespo.com" />
+		<sip_host value="www.yespo.com"/>
+    </application>
+    <ui>
+        <view value="0" />		
+		<settings>
+			<blacklist value="0"/>
+			<callin>
+				<close_callin value="false" />
+				<callin_prompt value="0" />
+			</callin>
+			<general>
+				<auto_run value="false" />
+				<remember value="false" />
+				<show_login value="false" />
+				<always_top value="false" />
+				<float_side value="false" />
+				<show_trayicon value="true" />
+				<close_window value="0" />
+				<remember_choose value="false" />
+			</general>
+			<hint>
+				<close_hint value="false" />
+				<call_hint value="true" />
+				<message_hint value="true" />
+			</hint>
+			<languages>
+				<language value="en_US" />
+			</languages>
+			<updatemethod>
+				<update_method value="1" />
+			</updatemethod>
+		</settings>	
+    </ui>
+    <service>
+		<audio>
+			<audio_output value="" />
+			<audio_input value="" />
+		</audio>
+		<sip>
+			<transport value="udp" />
+		</sip>
+        <command>
+            <common>
+                <query>
+                    <session_id value="session" />
+					<sign value="sign" />
+					<timestamp value="timestamp" />
+					<client value="client" />
+					<version value="ver" />
+					<language value="lang" />
+					<device_id value="device_id" />
+					<device_model value="device_model" />
+					<token value="token" />
+                </query>
+                <key>
+                    <error_code value="error_code" />
+                    <error_message value="error_msg" />
+					<error_number value="error_num" />
+					<error_tips value="error_tips" />
+					<result value="result" />
+                </key>
+            </common>
+			<loadconfig>
+				<url value="https://{host}/welcome/loadconfig" />
+				<query>
+					<last_time value="configUpTime" />
+					<reload value="isReloadConfig" />
+				</query>
+				<key>
+					<config value="config" />
+					<client value="client" />
+				</key>
+			</loadconfig>
+			<getserver>
+				<url value="https://{host}/welcome/server" />
+				<key>
+					<domain_status value="domain_status" />
+					<domain_call value="domain_call" />
+					<domain_im value="domain_im" />
+				</key>
+			</getserver>
+            <login>
+                <url value="https://{host}/welcome/login" />
+                <encrypt_key value="voicera" />
+                <query>
+                    <user_name value="username" />
+                    <password value="password" />
+                </query>
+                <key>
+					<partner_user value="p_user">
+						<partner_sys_id value="partner_sys_id" />
+						<partner_caller_id value="partner_caller_id" />
+						<partner_login_id value="partner_login_id" />
+						<partner_secret value="partner_secret" />
+						<partner_display_name value="partner_display_name" />
+						<partner_skill value="skill">
+							<language_1 value="language_1" />
+							<language_2 value="language_2" />
+							<is_free value="is_free" />
+							<partner_level value="partner_level" />
+						</partner_skill>
+						<partner_local value="local">
+							<country value="country" />
+							<language value="language" />
+						</partner_local>
+						<partner_small_photo value="small_photo" />
+						<partner_large_photo value="large_photo" />
+						<partner_token value="token" />
+					</partner_user>
+					<partner_server_ip value="server_ip" >
+						<domain_status value="domain_status" />
+						<domain_call value="domain_call" />
+						<domain_im value="domain_im" />
+					</partner_server_ip>
+					<partner_server_list value="server_list">
+						<domain_status value="domain_status" />
+						<domain_call value="domain_call" />
+						<domain_im value="domain_im" />
+					</partner_server_list>
+                </key>
+            </login>
+			<setclientinfo>
+				<url value="https://{host}/partneruser/setclientinfo" />
+				<query>
+					<last_domain_call value="last_domain_call" />
+				</query>
+			</setclientinfo>
+			<todaystat>
+				<url value="https://{host}/partneruser/todaystat" />
+				<key>
+					<success value="success" />
+					<answer value="answer" />
+					<noanswer value="noanswer" />
+				</key>
+			</todaystat>
+			<getnoreportinfo>
+				<url value="https://{host}/partneruser/getnoreportinfo" />
+				<key>
+					<no_report_num value="no_report_num" />
+				</key>
+			</getnoreportinfo>
+			<getcdrlist>
+				<url value="https://{host}/partneruser/getcdrlist" />
+				<query>
+					<id value="id" />
+					<type value="type" />
+				</query>
+				<key>
+					<id value="id" />
+					<ve_sys_id value="ve_sys_id" />
+					<meet_cdr_id value="meet_cdr_id" />
+					<small_photo value="small_photo" />
+					<display_name value="display_name" />
+					<start_call_time value="start_call_time" />
+					<call_time value="call_time" />
+					<is_answered value="is_answered" />
+					<call_mode value="call_mode" />
+					<is_success value="is_success" />
+				</key>
+			</getcdrlist>
+			<getcdrinfo>
+				<url value="https://{host}/partneruser/getcdrinfo" />
+				<query>
+					<meet_cdr_id value="meet_cdr_id" />
+				</query>
+				<key>
+					<cdr_type value="cdr_type" />
+					<caller_ve_sys_id value="caller_ve_sys_id" />
+					<caller_id value="caller_id" />
+					<caller_ve_login_id value="caller_ve_login_id" />
+					<caller_display_name value="caller_display_name" />
+					<caller_mobile value="caller_mobile" />
+					<caller_small_photo value="caller_small_photo" />
+					<caller_large_photo value="caller_large_photo" />
+					<is_pstn_call value="is_pstn_call" />
+					<call_country value="call_country" />
+					<callee_ve_sys_id value="callee_ve_sys_id" />
+					<callee_id value="callee_id" />
+					<callee_ve_login_id value="callee_ve_login_id" />
+					<callee_display_name value="callee_display_name" />
+					<callee_mobile value="callee_mobile" />
+					<callee_small_photo value="callee_small_photo" />
+					<callee_large_photo value="callee_large_photo" />
+					<partner_sys_id value="partner_sys_id" />
+					<partner_caller_id value="partner_caller_id" />
+					<partner_login_id value="partner_login_id" />
+					<partner_display_name value="partner_display_name" />
+					<partner_small_photo value="partner_small_photo" />
+					<partner_large_photo value="partner_large_photo" />
+					<is_free value="is_free" />
+					<partner_level value="partner_level" />
+					<language_1 value="language_1" />
+					<language_2 value="language_2" />
+					<call_time value="call_time" />
+					<start_call_time value="start_call_time" />
+				</key>
+			</getcdrinfo>
+			<getuserinfo>
+                <url value="https://{host}/partneruser/getuserinfo" />
+                <key>
+                    <partner_sys_id value="partner_sys_id" />
+                    <partner_caller_id value="partner_caller_id" />
+                    <partner_login_id value="partner_login_id" />
+                    <partner_secret value="partner_secret" />
+					<partner_display_name value="partner_display_name" />
+					<gender value="gender" />
+					<birthday value="birthday" />
+					<nationality value="nationality" />
+					<education value="education" />
+					<major value="major" />
+					<intro_info value="intro_info" />
+					<partner_skill value="skill">
+						<language_1 value="language_1" />
+						<language_2 value="language_2" />
+						<is_free value="is_free" />
+						<partner_level value="partner_level" />
+					</partner_skill>
+					<partner_small_photo value="small_photo" />
+					<partner_large_photo value="large_photo" />
+                </key>
+            </getuserinfo>
+			<getcalleruser>
+                <url value="https://{host}/partneruser/getcalleruser" />
+				<query>
+					<caller_id value="caller_id" />
+				</query>
+                <key>
+                    <small_photo value="small_photo" />
+                    <large_photo value="large_photo" />
+                    <display_name value="display_name" />
+                    <mobile value="mobile" />
+                </key>
+            </getcalleruser>
+			<savescreenshot>
+				<url value="https://{host}/partneruser/savescreenshot" />
+				<query>
+					<meet_cdr_id value="meet_cdr_id" />
+					<photo value="photo" />
+				</query>
+			</savescreenshot>
+			<changestatus>
+				<url value="https://{host}/partneruser/changestatus" />
+				<query>
+					<online_visible_status value="online_visible_status" />
+				</query>
+			</changestatus>
+			<getblacklist>
+				<url value="https://{host}/partneruser/getblacklist" />
+				<query>
+					<id value="id" />
+				</query>
+				<key>
+					<id value="id" />
+					<black_list_id value="id" />
+					<partner_sys_id value="partner_sys_id" />
+					<ve_sys_id value="ve_sys_id" />
+					<display_name value="display_name" />
+					<small_photo value="small_photo" />
+				</key>
+			</getblacklist>
+			<addblacklist>
+				<url value="https://{host}/partneruser/addblacklist" />
+				<query>
+					<ve_sys_id value="ve_sys_id" />
+				</query>
+				<key>
+					<id value="id" />
+					<black_list_id value="id" />
+					<partner_sys_id value="partner_sys_id" />
+					<ve_sys_id value="ve_sys_id" />
+					<display_name value="display_name" />
+					<small_photo value="small_photo" />
+				</key>
+			</addblacklist>
+			<delblacklist>
+				<url value="https://{host}/partneruser/delblacklist" />
+				<query>
+					<ve_sys_id value="ve_sys_id" />
+				</query>
+			</delblacklist>
+			<getmemberinfo>
+				<url value="https://{host}/partneruser/getmemberinfo" />
+				<query>
+					<ve_sys_id value="ve_sys_id" />
+				</query>
+				<key>
+					<ve_sys_id value="ve_sys_id" />
+					<ve_login_id value="ve_login_id" />
+					<caller_id value="caller_id" />
+					<display_name value="display_name" />
+					<native_language value="native_language" />
+					<country value="country" />
+					<major value="major" />
+					<small_photo value="small_photo" />
+				</key>
+			</getmemberinfo>
+			<getuploadphoto>
+				<url value="https://{host}/partneruser/getuploadphoto" />
+				<query>
+					<caller_id value="caller_id" />
+					<photo_id value="photo_id" />					
+				</query>
+				<key>
+					<photo_id value="photo_id" />
+					<expire value="expire" />
+					<small_photo value="small_photo" />
+					<large_photo value="large_photo" />
+				</key>
+			</getuploadphoto>
+        </command>
+		<media>
+			<download>
+				<file_block_size value="1024" />
+			</download>
+		</media>
+		<proto>
+		</proto>
+    </service>
+</preferences>

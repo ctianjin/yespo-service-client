@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Qpid::PhoneView</class>
+ <widget class="QWidget" name="Qpid::PhoneView">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>556</width>
+    <height>446</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Voice Easy</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#frameTop {
+	border: 1px solid #c3c3c3; 
+	border-left: 0px;
+	border-top: 0px;
+	border-right: 0px;
+	background: #f2f2f2;
+	max-height: 67px;
+	min-height: 67px;
+}
+
+#frameHomeContainer,#frameMakeCallContainer,#frameAddContactContainer {
+	border: 1px solid #c3c3c3;
+	border-left: 0px;
+	border-top: 0px;
+	border-bottom: 0px;
+}
+
+#frameTop QAbstractButton {
+	border: 0px;
+	background: #f2f2f2;
+	min-width: 90px;
+	min-height: 60px;
+	max-height: 60px;
+	font-size: 12px;
+	font-weight: bold;
+	color: #282828;
+}
+
+#frameTop QLabel {
+	max-height: 7px;
+	min-height: 7px;
+}
+
+#frameTop #labelHomeSelected {
+	background: url(:/images/ui/arrow_up.png) center top;
+	background-repeat: none;
+}
+
+#frameTop #pushButtonNeedInterpreter {
+	color: #398ab2;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="margin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QWidget" name="widget" native="true">
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="margin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QFrame" name="frameTop">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,0,0,1">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="margin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QFrame" name="frameHomeContainer">
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_5">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="margin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QToolButton" name="toolButtonHome">
+              <property name="focusPolicy">
+               <enum>Qt::NoFocus</enum>
+              </property>
+              <property name="text">
+               <string>Home</string>
+              </property>
+              <property name="icon">
+               <iconset resource="phone.qrc">
+                <normaloff>:/images/ui/icon_home.png</normaloff>:/images/ui/icon_home.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>32</width>
+                <height>32</height>
+               </size>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <property name="toolButtonStyle">
+               <enum>Qt::ToolButtonTextUnderIcon</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelHomeSelected">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="frameMakeCallContainer">
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_6">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="margin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QToolButton" name="toolButtonCall">
+              <property name="focusPolicy">
+               <enum>Qt::NoFocus</enum>
+              </property>
+              <property name="text">
+               <string>Call</string>
+              </property>
+              <property name="icon">
+               <iconset resource="phone.qrc">
+                <normaloff>:/images/ui/icon_make_call.png</normaloff>:/images/ui/icon_make_call.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>32</width>
+                <height>32</height>
+               </size>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <property name="toolButtonStyle">
+               <enum>Qt::ToolButtonTextUnderIcon</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelMakeCallSelected">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="frameAddContactContainer">
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="margin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QToolButton" name="toolButtonAddContact">
+              <property name="focusPolicy">
+               <enum>Qt::NoFocus</enum>
+              </property>
+              <property name="text">
+               <string>Add Contact</string>
+              </property>
+              <property name="icon">
+               <iconset resource="phone.qrc">
+                <normaloff>:/images/ui/icon_add_contact.png</normaloff>:/images/ui/icon_add_contact.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>32</width>
+                <height>32</height>
+               </size>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <property name="toolButtonStyle">
+               <enum>Qt::ToolButtonTextUnderIcon</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelAddContactSelected">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="frameNeedInterpreterContainer">
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_7">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="margin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QPushButton" name="pushButtonNeedInterpreter">
+              <property name="focusPolicy">
+               <enum>Qt::NoFocus</enum>
+              </property>
+              <property name="text">
+               <string>Need an interpreter?</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelNeedInterpretedSelected">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QStackedWidget" name="stackedWidget">
+        <property name="currentIndex">
+         <number>4</number>
+        </property>
+        <widget class="Qpid::PhoneHomeView" name="pageHome">
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="margin">
+           <number>0</number>
+          </property>
+         </layout>
+        </widget>
+        <widget class="Qpid::PhoneHistoryView" name="pageHistory"/>
+        <widget class="Qpid::PhoneMakeCallView" name="pageMakeCall"/>
+        <widget class="Qpid::PhoneAddContactView" name="pageAddContact"/>
+        <widget class="Qpid::PhoneInterpreterView" name="pageNeedInterpreter">
+         <layout class="QVBoxLayout" name="verticalLayout_11">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="margin">
+           <number>0</number>
+          </property>
+         </layout>
+        </widget>
+        <widget class="Qpid::PhoneCallingView" name="pageCalling"/>
+        <widget class="Qpid::PhoneContactView" name="pageContact"/>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Qpid::PhoneCallingView</class>
+   <extends>QWidget</extends>
+   <header>phonecallingview.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Qpid::PhoneHomeView</class>
+   <extends>QWidget</extends>
+   <header>phonehomeview.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Qpid::PhoneInterpreterView</class>
+   <extends>QWidget</extends>
+   <header>phoneinterpreterview.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Qpid::PhoneMakeCallView</class>
+   <extends>QWidget</extends>
+   <header>phonemakecallview.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Qpid::PhoneAddContactView</class>
+   <extends>QWidget</extends>
+   <header>phoneaddcontactview.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Qpid::PhoneContactView</class>
+   <extends>QWidget</extends>
+   <header>phonecontactview.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Qpid::PhoneHistoryView</class>
+   <extends>QWidget</extends>
+   <header>phonehistoryview.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="phone.qrc"/>
+ </resources>
+ <connections/>
+</ui>

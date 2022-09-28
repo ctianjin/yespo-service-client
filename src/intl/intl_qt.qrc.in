@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE RCC>
+<RCC version="1.0">
+    <qresource prefix="/">
+        <file>translations/qt_zh_CN.qm</file>
+        <file>translations/@BUILDSYS_PRODUCT_DOMAIN@_en_US.qm</file>
+        <file>translations/@BUILDSYS_PRODUCT_DOMAIN@_zh_CN.qm</file>
+    </qresource>
+</RCC>

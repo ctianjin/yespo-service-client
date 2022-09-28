@@ -1,0 +1,37 @@
+Index: common/config_file.c
+===================================================================
+--- common/config_file.c    (revision 964)
++++ common/config_file.c    (working copy)
+@@ -646,6 +646,8 @@
+ #else
+ #include <QtCore/QDir>
+ #endif
++
++#ifdef CONFIG_WRITE
+ // Take from KStandardDirs::makeDir
+ static bool makeDir(const QString& dir, int mode)
+ {
+@@ -700,6 +702,7 @@
+     return true;
+ #endif
+ }
++#endif // CONFIG_WRITE
+ 
+ #else
+ #include <kstandarddirs.h>
+@@ -762,6 +765,7 @@
+             sprintf(cfgDir, "%s/qtcurve/", env);
+         }
+ 
++#ifdef CONFIG_WRITE
+ //#if defined CONFIG_WRITE || !defined __cplusplus
+         {
+         struct stat info;
+@@ -780,6 +784,7 @@
+         }
+         }
+ //#endif
++#endif // CONFIG_WRITE
+     }
+ 
+     return cfgDir;

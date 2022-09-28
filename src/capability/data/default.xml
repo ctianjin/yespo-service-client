@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<preferences>
+    <application>
+        <language value="" />
+        <remember_exit value="false" />
+		<window_hide value="1" />
+    </application>
+    <ui>
+        <login>
+            <auto_login value="false" />
+			<remember_password value="false" />
+        </login>
+        <view value="0" />
+    </ui>
+    <service>
+		<audio>
+			<audio_output value="" />
+			<audio_input value="" />
+		</audio>
+        <command>
+            <common>
+                <query>
+                    <session_id value="session" />
+                </query>
+                <key>
+                    <error_code value="error_code" />
+                    <error_message value="error_msg" />
+                </key>
+            </common>
+			<loadconfig>
+				<url value="http://192.168.8.245:100/welcome/loadconfiginfo" />
+				<query>
+					<last_time value="configUpTime" />
+					<reload value="isReloadConfig" />
+				</query>
+				<key>
+					<info value="configinfo">
+						<lang value="tranLangArray" />
+						<country value="countryArray" />
+						<service value="serviceLangArray" />
+						<major value="majorArray" />
+					</info>
+					<last_time value="updateLastTime" />
+				</key>
+			</loadconfig>
+            <login>
+                <url value="http://192.168.8.245:100/transhttp/login" />
+                <encrypt_key value="voicera" />
+                <query>
+                    <user_name value="username" />
+                    <password value="password" />
+                </query>
+                <key>
+                    <session_id value="session_id" />
+                    <result value="result" />
+                    <sip_account value="sip_account" />
+                    <account_menu_url value="account_menu_url" />
+					<report_menu_url value="report_menu_url" />
+					<history_menu_url value="history_menu_url" />
+					<profile_menu_url value="profile_menu_url" />
+					<photo_url value="photo_url" />
+					<nick_name value="nick_name" />
+                </key>
+            </login>
+			<forgetpassword>
+				<url value="http://192.168.8.245:100/index.php/interface/forgetpassword" />
+				<query>
+					<user_name value="username" />
+				</query>
+			</forgetpassword>
+			<createaccount>
+				<url value="http://192.168.8.245:100/index.php/interface/createaccount" />
+			</createaccount>
+			<translatorstatus>
+				<url value="http://{host}/transhttp/upstatus" />
+				<query>
+					<user_name value="username" />
+					<status value="status" />
+				</query>
+				<key>
+					<result value="result" />
+				</key>
+			</translatorstatus>
+			<version>
+				<url value="http://{host}/index.php/transhttp/versioncheck" />
+				<query />
+				<key>
+					<version_number value="version_number" />
+					<download_link value="download_link" />
+				</key>
+			</version>
+        </command>
+		<media>
+			<download>
+				<file_block_size value="1024" />
+			</download>
+		</media>
+    </service>
+</preferences>

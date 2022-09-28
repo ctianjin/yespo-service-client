@@ -1,0 +1,799 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ns::ViewIncomingCall</class>
+ <widget class="QWidget" name="ns::ViewIncomingCall">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>604</width>
+    <height>570</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>YesPo Service Client</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">* {
+	font-family: Verdana, &quot;宋体&quot;, Arial, Sans-serif, Segoe UI, Tahoma;
+}
+#widgetBottom {
+	border-top: 1px solid #57a3d3;
+	border-right: 1px solid #015c97;
+	/*background: #f9f9f9;*/
+}
+
+#widgetBottom #widgetCallPanel {
+	background: url(:/images/ui/bg_processing.png);
+}
+
+#labelCalleeDetail, #labelCalleeName, #labelCallerName, #labelCallerDetail, #labelCallHint, #labelMeDisplay{
+	/*color: #ffffff;*/
+	color : #c0f6ff;
+}
+
+/*#widgetBottom #widgetCallerPhoto, #widgetBottom #widgetCalleePhoto {
+	border: 2px solid #066085;
+	border-radius: 42px;
+}*/
+
+#widgetBottom #widgetCallerPhoto {
+	border: 2px solid #066DB2;
+	border-radius: 79px;
+}
+
+#widgetBottom QPushButton {
+	font-size: 16px;
+	font-weight: bold;
+	color: #ffffff;
+	border: 0px;
+}
+
+#widgetBottom #labelCallerConvert,#widgetBottom #labelMeConvert {
+	background-image: url(:/images/ui/call_forward.png);
+}
+
+#widgetBottom #pushButtonAnswer {
+	color: #FFFFFF;
+	border-image: url(:/images/ui/bi_callin_answer.png) 0 20 0 20;
+	border-top: 0px transparent;
+	border-right: 20px transparent;
+	border-bottom: 0px transparent;
+	border-left: 20px transparent;
+}
+
+#widgetBottom #pushButtonAnswer:hover {
+	border-image: url(:/images/ui/bi_callin_answer_hover.png) 0 20 0 20;
+}
+
+#widgetBottom #pushButtonAnswer:pressed {
+	border-image: url(:/images/ui/bi_callin_answer_pressed.png) 0 20 0 20;
+}
+
+#widgetBottom #pushButtonReject {
+	border-image: url(:/images/ui/bi_callin_decline.png) 0 20 0 20;
+	border-top: 0px transparent;
+	border-right: 20px transparent;
+	border-bottom: 0px transparent;
+	border-left: 20px transparent;
+}
+
+#widgetBottom #pushButtonReject:hover {
+	border-image: url(:/images/ui/bi_callin_decline_hover.png) 0 20 0 20;
+}
+
+#widgetBottom #pushButtonReject:pressed {
+	border-image: url(:/images/ui/bi_callin_decline_pressed.png) 0 20 0 20;
+}
+
+#widgetTranslationLanguage {
+/*	background-color: rgb(0, 0, 0, 30%);*/
+}
+
+#widgetCall {
+	/*background-color: rgb(0, 0, 0, 30%);*/
+}
+
+#widgetBottom #labelTranslationLanguage {
+	background: #f7fcff;
+	font-size: 14px;
+	font-weight: bold;
+	padding-left: 5px;
+	border-bottom: 1px solid #EFF4F8;
+}
+
+#labelCallerPhoto{
+	border-radius: 77px;
+	background: #EEEEEE;
+	color: #C4092C;
+}
+
+#labelCallerName,#labelCallerMobile, #labelCalleeName, #labelCalleeMobile {
+	font-size: 15px;
+	color: #FCFFFC;
+}
+
+/*#labelCallerName,#labelCalleeName {
+	padding-top: 26px;
+}*/
+
+#widgetSource {
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	border-right: 1px solid #2DA2DA;
+}
+
+#widgetTarget {
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+
+#labelSourceArrow {
+	background-image: url(:/images/ui/lang_source_arrow.png);
+}
+
+#labelTargetArrow {
+	background-image: url(:/images/ui/lang_target_arrow.png);
+}
+
+#labelLocalLang {
+	font-size: 15px;
+	color: #FFFFFF;
+}
+
+#labelLocalLangValue {
+	font-size: 15px;
+	color: #FFFFFF;
+	background: #D6EBEB;
+	border-radius: 19px;
+}
+
+#widgetLangValue {
+	border-radius: 20px;
+	border: 1px solid #006699;
+}
+
+#widgetCalleePhoto {
+    border: 2px solid #066DB2;
+	border-radius: 79px;
+}
+
+#labelCalleePhoto {
+	border-radius: 77px;
+	background: #EEEEEE;
+}
+
+#labelCalleeMobile {
+	padding-left: 45px;
+}
+
+#labelCalleeName{
+	padding-left: 50px;
+}
+</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout_2">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="margin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QWidget" name="widgetBottom" native="true">
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="margin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QWidget" name="widgetCallPanel" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_10">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="margin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="ns::CustomMovieWidget" name="widgetPartner" native="true">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>410</height>
+            </size>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_6">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>25</number>
+            </property>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_5">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>20</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <spacer name="horizontalSpacer_3">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="ns::CustomMovieWidget" name="widgetMovie" native="true">
+                <property name="minimumSize">
+                 <size>
+                  <width>200</width>
+                  <height>290</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>200</width>
+                  <height>290</height>
+                 </size>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>46</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_4">
+                   <property name="spacing">
+                    <number>0</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>3</number>
+                   </property>
+                   <item>
+                    <widget class="QWidget" name="widgetCallerPhoto" native="true">
+                     <property name="minimumSize">
+                      <size>
+                       <width>158</width>
+                       <height>158</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>158</width>
+                       <height>158</height>
+                      </size>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_5">
+                      <property name="margin">
+                       <number>2</number>
+                      </property>
+                      <item>
+                       <widget class="ns::ElidedLabel" name="labelCallerPhoto">
+                        <property name="minimumSize">
+                         <size>
+                          <width>154</width>
+                          <height>154</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>154</width>
+                          <height>154</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <widget class="QWidget" name="widgetCallerDetail" native="true">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_7">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>9</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="labelCallerName">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>18</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>18</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="labelCallerMobile">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>12</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>12</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                   <zorder>labelCallerMobile</zorder>
+                   <zorder>labelCallerName</zorder>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="labelMovie">
+                <property name="minimumSize">
+                 <size>
+                  <width>65</width>
+                  <height>15</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>65</width>
+                  <height>15</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QWidget" name="widgetCallee" native="true">
+                <property name="minimumSize">
+                 <size>
+                  <width>240</width>
+                  <height>290</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>240</width>
+                  <height>290</height>
+                 </size>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_8">
+                 <property name="spacing">
+                  <number>3</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>19</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>49</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QWidget" name="widgetCalleePhoto" native="true">
+                   <property name="minimumSize">
+                    <size>
+                     <width>158</width>
+                     <height>158</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>158</width>
+                     <height>158</height>
+                    </size>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_9">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <property name="margin">
+                     <number>2</number>
+                    </property>
+                    <item>
+                     <widget class="ns::ElidedLabel" name="labelCalleePhoto">
+                      <property name="minimumSize">
+                       <size>
+                        <width>154</width>
+                        <height>154</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>154</width>
+                        <height>154</height>
+                       </size>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QWidget" name="widget" native="true">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>36</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>36</height>
+                    </size>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_11">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <property name="margin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="labelCalleeName">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>18</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>18</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="labelCalleeMobile">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>18</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>18</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_4">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QWidget" name="widgetTranslationLanguage" native="true">
+           <property name="minimumSize">
+            <size>
+             <width>603</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>603</width>
+             <height>100</height>
+            </size>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_8">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="margin">
+             <number>0</number>
+            </property>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QWidget" name="widgetCall" native="true">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>135</height>
+            </size>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <property name="margin">
+             <number>0</number>
+            </property>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_3">
+              <property name="topMargin">
+               <number>5</number>
+              </property>
+              <item>
+               <spacer name="horizontalSpacer_5">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButtonAnswer">
+                <property name="minimumSize">
+                 <size>
+                  <width>235</width>
+                  <height>46</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>235</width>
+                  <height>46</height>
+                 </size>
+                </property>
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::NoFocus</enum>
+                </property>
+                <property name="text">
+                 <string>Answer</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButtonReject">
+                <property name="minimumSize">
+                 <size>
+                  <width>114</width>
+                  <height>46</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>114</width>
+                  <height>46</height>
+                 </size>
+                </property>
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::NoFocus</enum>
+                </property>
+                <property name="text">
+                 <string>Reject</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_6">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="labelCallHint">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Notice : During the call may be recorded and photographed</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignHCenter|Qt::AlignTop</set>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ns::ElidedLabel</class>
+   <extends>QLabel</extends>
+   <header>elidedlabel.h</header>
+  </customwidget>
+  <customwidget>
+   <class>ns::CustomMovieWidget</class>
+   <extends>QWidget</extends>
+   <header>custommoviewidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="translator.qrc"/>
+ </resources>
+ <connections/>
+</ui>

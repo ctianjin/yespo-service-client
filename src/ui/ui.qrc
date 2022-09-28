@@ -1,0 +1,22 @@
+<RCC>
+  <qresource prefix="/">
+    <file>style/default.qss</file>
+    <file alias="style/default.qss">style/default_zh_CN.qss</file>
+    <file>images/critical.png</file>
+    <file>images/information.png</file>
+    <file>images/question.png</file>
+    <file>images/warning.png</file>
+    <file>images/however.png</file>
+	<file>images/weep.png</file>
+	<file>images/logo.png</file>
+	<file>images/caption_close_pressed.png</file>
+	<file>images/caption_close.png</file>
+	<file>images/caption_close_hover.png</file>
+	<file>images/prompt_ok.png</file>
+	<file>images/prompt_ok_hover.png</file>
+	<file>images/prompt_ok_pressed.png</file>	
+	<file>images/prompt_cancel.png</file>
+	<file>images/prompt_cancel_hover.png</file>
+	<file>images/prompt_cancel_pressed.png</file>
+  </qresource>
+</RCC>

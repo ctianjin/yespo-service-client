@@ -1,0 +1,23 @@
+
+$type sqlite
+$name preference
+$version 2.0
+$display_name Preference
+$file_name pref.dat
+
+%encoding UTF-8
+%default_cache_size 8000
+
+default_preference(default_pref)
+{
+    application(app)    string primary_key not_null default='' sort
+    path                string primary_key not_null sort
+    value               variant
+}
+
+user_preference(user_pref)
+{
+    application(app)    string primary_key not_null default='' sort
+    path                string primary_key not_null sort
+    value               variant
+}

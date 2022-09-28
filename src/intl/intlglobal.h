@@ -1,0 +1,18 @@
+#ifndef INTLGLOBAL_H
+#define INTLGLOBAL_H
+
+#include <QtCore/QtGlobal>
+
+#ifdef BUILDSYS_SHARED_LIBS
+#  ifdef BUILDSYS_INTL_SOURCE
+#    define BUILDSYS_INTL_DECL Q_DECL_EXPORT
+#  else
+#    define BUILDSYS_INTL_DECL Q_DECL_IMPORT
+#  endif // BUILDSYS_INTL_SOURCE
+#endif // BUILDSYS_SHARED_LIBS
+
+#ifndef BUILDSYS_INTL_DECL
+#  define BUILDSYS_INTL_DECL
+#endif
+
+#endif // INTLGLOBAL_H

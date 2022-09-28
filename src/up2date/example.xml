@@ -1,0 +1,763 @@
+<update name="Rank百度竞价助手">
+	<version no="3.2.1217.1" releasedate="2012-12-17 17:00:00">
+		<language type="Chinese" langid="804">
+			<whatsnewlist>
+			</whatsnewlist>
+			<fixedlist>
+				<bugfixed>优化：网络请求，忽略可能存在的无效安全认证警告</bugfixed>
+				<bugfixed>优化：日志记录</bugfixed>
+			</fixedlist>
+			<improvedlist>
+				<improved>同步：全新同步功能，支持部分计划同步以及新计划同步</improved>
+				<improved>调词列表：新增“排位标题”列，用户随时查看关键词实际匹配，优化消费</improved>
+				<improved>替换关键词：添加批量修改“替代关键词”操作</improved>
+			</improvedlist>
+			<files>
+				<file name="RankUpdate.zip" ext="ZIP" version="1.0.0.1" size="1576297" modifieddate="2012-12-17"
+					copyto="%UPDATE%" runafterdownload="true" deleteafterupdate="true" parameters="">
+					<downloads>
+						<download>http://www.ranknowcn.com/updates/files/rank3/RankUpdate.zip</download>
+					</downloads>
+				</file>
+			</files>
+		</language>  
+	</version>
+	<version no="3.2.1201.1" releasedate="2012-12-01 17:00:00">
+		<language type="Chinese" langid="804">
+			<whatsnewlist>
+			</whatsnewlist>
+			<fixedlist>
+				<bugfixed>修复：某些情况下，强制关闭调词导致的崩溃问题</bugfixed>
+			</fixedlist>
+			<improvedlist>
+				<improved>新增对某些特殊域名解析支持</improved>
+			</improvedlist>
+			<files>
+				<file name="RankUpdate.zip" ext="ZIP" version="1.0.0.1" size="1576297" modifieddate="2012-12-01"
+					copyto="%UPDATE%" runafterdownload="true" deleteafterupdate="true" parameters="">
+					<downloads>
+						<download>http://www.ranknowcn.com/updates/files/rank3/RankUpdate.zip</download>
+					</downloads>
+				</file>
+			</files>
+		</language>  
+	</version>
+	<version no="3.2.1128.1" releasedate="2012-11-28 17:00:00">
+		<language type="Chinese" langid="804">
+			<whatsnewlist>
+			</whatsnewlist>
+			<fixedlist>
+				<bugfixed>修复：监控文件夹从有到无，重新同步时，不删除监控文件夹问题</bugfixed>
+				<bugfixed>修复：用户关键词排位解析域名匹配问题</bugfixed>
+			</fixedlist>
+			<improvedlist>
+				<improved>新增：对开启活动的用户关键词，查排位支持</improved>
+				<improved>自动获取用户域名功能优化</improved>
+				<improved>调词时间较长，提示功能优化，可点击否继续调词。</improved>
+			</improvedlist>
+			<files>
+				<file name="RankUpdate.zip" ext="ZIP" version="1.0.0.1" size="1576297" modifieddate="2012-11-28"
+					copyto="%UPDATE%" runafterdownload="true" deleteafterupdate="true" parameters="">
+					<downloads>
+						<download>http://www.ranknowcn.com/updates/files/rank3/RankUpdate.zip</download>
+					</downloads>
+				</file>
+			</files>
+		</language>  
+	</version>
+	<version no="3.2.1115.1" releasedate="2012-11-15 17:00:00">
+		<language type="Chinese" langid="804">
+			<whatsnewlist>
+			</whatsnewlist>
+			<fixedlist>
+				<bugfixed>修复部分客户结束调词时导致的问题</bugfixed>
+			</fixedlist>
+			<improvedlist>
+				<improved>新增对.so域名支持</improved>
+			</improvedlist>
+			<files>
+				<file name="RankUpdate.zip" ext="ZIP" version="1.0.0.1" size="1576297" modifieddate="2012-11-15"
+					copyto="%UPDATE%" runafterdownload="true" deleteafterupdate="true" parameters="">
+					<downloads>
+						<download>http://www.ranknowcn.com/updates/files/rank3/RankUpdate.zip</download>
+					</downloads>
+				</file>
+			</files>
+		</language>  
+	</version>
+	<version no="3.1.1026.1" releasedate="2012-10-26 17:00:00">
+		<language type="Chinese" langid="804">
+			<whatsnewlist>
+			</whatsnewlist>
+			<fixedlist>
+			</fixedlist>
+			<improvedlist>
+				<improved>统计信息优化，方便定位可能的问题</improved>
+			</improvedlist>
+			<files>
+				<file name="RankUpdate.zip" ext="ZIP" version="1.0.0.1" size="1576297" modifieddate="2012-10-26"
+					copyto="%UPDATE%" runafterdownload="true" deleteafterupdate="true" parameters="">
+					<downloads>
+						<download>http://www.ranknowcn.com/updates/files/rank3/RankUpdate.zip</download>
+					</downloads>
+				</file>
+			</files>
+		</language>  
+	</version>
+	<version no="3.1.1024.2" releasedate="2012-10-24 17:00:00">
+		<language type="Chinese" langid="804">
+			<whatsnewlist>
+			</whatsnewlist>
+			<fixedlist>
+			</fixedlist>
+			<improvedlist>
+				<improved>百度账户掉线优化</improved>
+			</improvedlist>
+			<files>
+				<file name="RankUpdate.zip" ext="ZIP" version="1.0.0.1" size="1576297" modifieddate="2012-10-24"
+					copyto="%UPDATE%" runafterdownload="true" deleteafterupdate="true" parameters="">
+					<downloads>
+						<download>http://www.ranknowcn.com/updates/files/rank3/RankUpdate.zip</download>
+					</downloads>
+				</file>
+			</files>
+		</language>  
+	</version>
+	<version no="3.1.1023.4" releasedate="2012-10-23 18:30:00">
+		<language type="Chinese" langid="804">
+			<whatsnewlist>
+			</whatsnewlist>
+			<fixedlist>
+			</fixedlist>
+			<improvedlist>
+				<improved>百度登录优化</improved>
+				<improved>“账户未知状态”问题优化，保证继续调词</improved>
+				<improved>日志记录系统优化，提升性能减少冗余</improved>
+			</improvedlist>
+			<files>
+				<file name="RankUpdate.zip" ext="ZIP" version="1.0.0.1" size="1576297" modifieddate="2012-10-23"
+					copyto="%UPDATE%" runafterdownload="true" deleteafterupdate="true" parameters="">
+					<downloads>
+						<download>http://www.ranknowcn.com/updates/files/rank3/RankUpdate.zip</download>
+					</downloads>
+				</file>
+			</files>
+		</language>  
+	</version>
+	<version no="3.1.1022.1" releasedate="2012-10-22 18:30:00">
+		<language type="Chinese" langid="804">
+			<whatsnewlist>
+			</whatsnewlist>
+			<fixedlist>
+			</fixedlist>
+			<improvedlist>
+				<improved>登录百度后台帐号优化，更加友好</improved>
+				<improved>开始调词前等待时间更短，减少您的等待</improved>
+				<improved>“仅更新关键词信息”功能，完成的词更新状态显示</improved>
+			</improvedlist>
+			<files>
+				<file name="RankUpdate.zip" ext="ZIP" version="1.0.0.1" size="1576297" modifieddate="2012-10-22"
+					copyto="%UPDATE%" runafterdownload="true" deleteafterupdate="true" parameters="">
+					<downloads>
+						<download>http://www.ranknowcn.com/updates/files/rank3/RankUpdate.zip</download>
+					</downloads>
+				</file>
+			</files>
+		</language>  
+	</version>
+	<version no="3.1.2.10201" releasedate="2012-10-20 18:30:00">
+		<language type="Chinese" langid="804">
+			<whatsnewlist>
+			</whatsnewlist>
+			<fixedlist>
+			</fixedlist>
+			<improvedlist>
+				<improved>新版崩溃处理程序，实现自动化运行</improved>
+				<improved>日志模块优化，提升程序性能</improved>
+			</improvedlist>
+			<files>
+				<file name="RankUpdate.zip" ext="ZIP" version="1.0.0.1" size="1576297" modifieddate="2012-10-20"
+					copyto="%UPDATE%" runafterdownload="true" deleteafterupdate="true" parameters="">
+					<downloads>
+						<download>http://www.ranknowcn.com/updates/files/rank3/RankUpdate.zip</download>
+					</downloads>
+				</file>
+			</files>
+		</language>  
+	</version>
+	<version no="3.1.2.10121" releasedate="2012-10-12 18:30:00">
+		<language type="Chinese" langid="804">
+			<whatsnewlist>
+			</whatsnewlist>
+			<fixedlist>
+			</fixedlist>
+			<improvedlist>
+				<improved>新版崩溃处理程序，实现自动化运行</improved>
+				<improved>日志模块优化，提升程序性能</improved>
+			</improvedlist>
+			<files>
+				<file name="RankUpdate.zip" ext="ZIP" version="1.0.0.1" size="1576297" modifieddate="2012-10-12"
+					copyto="%UPDATE%" runafterdownload="true" deleteafterupdate="true" parameters="">
+					<downloads>
+						<download>http://www.ranknowcn.com/updates/files/rank3/RankUpdate.zip</download>
+					</downloads>
+				</file>
+			</files>
+		</language>  
+	</version>
+	<version no="3.1.2.10091" releasedate="2012-10-09 18:30:00">
+		<language type="Chinese" langid="804">
+			<whatsnewlist>
+			</whatsnewlist>
+			<fixedlist>
+				<bugfixed>2012年10月09日百度升级补丁</bugfixed>
+			</fixedlist>
+			<improvedlist>
+				<improved>右键调词功能优化</improved>
+				<improved>监控文件夹同步功能优化</improved>
+				<improved>调词功能优化</improved>
+			</improvedlist>
+			<files>
+				<file name="RankUpdate.zip" ext="ZIP" version="1.0.0.1" size="1576297" modifieddate="2012-10-09"
+					copyto="%UPDATE%" runafterdownload="true" deleteafterupdate="true" parameters="">
+					<downloads>
+						<download>http://www.ranknowcn.com/updates/files/rank3/RankUpdate.zip</download>
+					</downloads>
+				</file>
+			</files>
+		</language>  
+	</version>
+	<version no="3.1.1.9101" releasedate="2012-09-10 18:30:00">
+		<language type="Chinese" langid="804">
+			<whatsnewlist>
+			</whatsnewlist>
+			<fixedlist>
+				<bugfixed>软件调词功能优化</bugfixed>
+			</fixedlist>
+			<improvedlist>
+				<improved>医疗行业广告位增至8位</improved>
+				<improved>新增：批量修改价格时，支持增加一定幅度功能</improved>
+			</improvedlist>
+			<files>
+				<file name="RankUpdate.zip" ext="ZIP" version="1.0.0.1" size="1576297" modifieddate="2012-09-10"
+					copyto="%UPDATE%" runafterdownload="true" deleteafterupdate="true" parameters="">
+					<downloads>
+						<download>http://www.ranknowcn.com/updates/files/rank3/RankUpdate.zip</download>
+					</downloads>
+				</file>
+			</files>
+		</language>  
+	</version>
+	<version no="3.1.1.8171" releasedate="2012-08-17 18:30:00">
+		<language type="Chinese" langid="804">
+			<whatsnewlist>
+			</whatsnewlist>
+			<fixedlist>
+				<bugfixed>修复：调词过程中可能导致的崩溃问题</bugfixed>
+			</fixedlist>
+			<improvedlist>
+			</improvedlist>
+			<files>
+				<file name="RankUpdate.zip" ext="ZIP" version="1.0.0.1" size="1576297" modifieddate="2012-08-17"
+					copyto="%UPDATE%" runafterdownload="true" deleteafterupdate="true" parameters="">
+					<downloads>
+						<download>http://www.ranknowcn.com/updates/files/rank3/RankUpdate.zip</download>
+					</downloads>
+				</file>
+			</files>
+		</language>  
+	</version>
+	<version no="3.1.1.8071" releasedate="2012-08-09 18:30:00">
+		<language type="Chinese" langid="804">
+			<whatsnewlist>
+			</whatsnewlist>
+			<fixedlist>
+				<bugfixed>修复：自动调词日志Bug</bugfixed>
+				<bugfixed>修复：自动调词+计划地区调词弹出确认框Bug</bugfixed>
+				<bugfixed>修复：用户域名提取可能出现的错误</bugfixed>
+			</fixedlist>
+			<improvedlist>
+				<improved>右键调词功能全面升级</improved>
+				<improved>简化显示的状态，去除：“限价排位低于目标”“右侧限价排位低”“右侧限价排位低于目标”“左侧限价无排位”“右侧限价无排位”等状态</improved>
+				<improved>根据用户设置，增加：“设为起价”“设为原价”“设为原价（不超过限价）”“设为指定价格”等状态</improved>
+				<improved>调词流程优化，防止少数情况下导致的没有检测到搜索无效问题</improved>
+				<improved>质量度显示不显示数字</improved>
+			</improvedlist>
+			<files>
+				<file name="RankUpdate.zip" ext="ZIP" version="1.0.0.1" size="1576297" modifieddate="2012-08-09"
+					copyto="%UPDATE%" runafterdownload="true" deleteafterupdate="true" parameters="">
+					<downloads>
+						<download>http://www.ranknowcn.com/updates/files/rank3/RankUpdate.zip</download>
+					</downloads>
+				</file>
+			</files>
+		</language>  
+	</version>
+	<version no="3.1.1.7241" releasedate="2012-07-24 18:30:00">
+		<language type="Chinese" langid="804">
+			<whatsnewlist>
+			</whatsnewlist>
+			<fixedlist>
+				<bugfixed>修复：全行业设定可能导致的调词目标排位不匹配问题</bugfixed>
+				<bugfixed>修复：关键词管理工具条消失问题</bugfixed>
+				<bugfixed>修复：某些情况下，关键词匹配模式不更新问题</bugfixed>
+			</fixedlist>
+			<improvedlist>
+				<improved>质量度功能更新，新增绿色高质量词的质量度显示效果</improved>
+				<improved>选择词较多时，优化软件更新状态功能</improved>
+			</improvedlist>
+			<files>
+				<file name="RankUpdate.zip" ext="ZIP" version="1.0.0.1" size="1576297" modifieddate="2012-07-24"
+					copyto="%UPDATE%" runafterdownload="true" deleteafterupdate="true" parameters="">
+					<downloads>
+						<download>http://www.ranknowcn.com/updates/files/rank3/RankUpdate.zip</download>
+					</downloads>
+				</file>
+			</files>
+		</language>  
+	</version>
+	<version no="3.1.1.7231" releasedate="2012-07-23 9:30:00">
+		<language type="Chinese" langid="804">
+			<whatsnewlist>
+			</whatsnewlist>
+			<fixedlist>
+				<bugfixed>修复：“计划地域”调词功能可能导致的本地/异地调词显示问题</bugfixed>
+				<bugfixed>查询排位出现无广告位时，调词不结束问题修复</bugfixed>
+				<bugfixed>修复：某些情况下，“禁止关键词”设置不保存问题</bugfixed>
+				<bugfixed>修复：特定关键词查找，只输入两个文字时，不查找问题</bugfixed>
+			</fixedlist>
+			<improvedlist>
+				<improved>全新：“计划地域”调词功能，调词更方便。可选择多个不同推广地区的计划同时调词</improved>
+				<improved>全新“集团网址”功能，更能满足您的集团网址调词需求</improved>
+				<improved>“虚高容值”功能优化，设置虚高容值更加智能</improved>
+				<improved>同步帐号时，同时清理账户监控文件夹内容</improved>
+				<improved>精确/普通调词模式下，虚高进一步优化</improved>
+				<improved>右键调词日志显示修正及优化</improved>
+			</improvedlist>
+			<files>
+				<file name="RankUpdate.zip" ext="ZIP" version="1.0.0.1" size="1576297" modifieddate="2012-07-23"
+					copyto="%UPDATE%" runafterdownload="true" deleteafterupdate="true" parameters="">
+					<downloads>
+						<download>http://www.ranknowcn.com/updates/files/rank3/RankUpdate.zip</download>
+					</downloads>
+				</file>
+			</files>
+		</language>  
+	</version>
+	<version no="3.0.7.7101" releasedate="2012-07-10 17:30:00">
+		<language type="Chinese" langid="804">
+			<whatsnewlist>
+			</whatsnewlist>
+			<fixedlist>
+			</fixedlist>
+			<improvedlist>
+				<improved>新增“右侧第七”目标排位</improved>
+				<improved>新增右键“调整选中词”功能，支持对选中的词单独开始调词</improved>
+			</improvedlist>
+			<files>
+				<file name="RankUpdate.zip" ext="ZIP" version="1.0.0.1" size="1576297" modifieddate="2012-07-10"
+					copyto="%UPDATE%" runafterdownload="true" deleteafterupdate="true" parameters="">
+					<downloads>
+						<download>http://www.ranknowcn.com/updates/files/rank3/RankUpdate.zip</download>
+					</downloads>
+				</file>
+			</files>
+		</language>  
+	</version>
+	<version no="3.0.7.7051" releasedate="2012-07-05 23:30:00">
+		<language type="Chinese" langid="804">
+			<whatsnewlist>
+			</whatsnewlist>
+			<fixedlist>
+			</fixedlist>
+			<improvedlist>
+				<improved>新增“右侧第七”目标排位</improved>
+				<improved>新增右键“调整选中词”功能，支持对选中的词单独开始调词</improved>
+			</improvedlist>
+			<files>
+				<file name="RankUpdate.zip" ext="ZIP" version="1.0.0.1" size="1576297" modifieddate="2012-07-05"
+					copyto="%UPDATE%" runafterdownload="true" deleteafterupdate="true" parameters="">
+					<downloads>
+						<download>http://www.ranknowcn.com/updates/files/rank3/RankUpdate.zip</download>
+					</downloads>
+				</file>
+			</files>
+		</language>  
+	</version>
+	<version no="3.0.6.6291" releasedate="2012-07-02 17:30:00">
+		<language type="Chinese" langid="804">
+			<whatsnewlist>
+			</whatsnewlist>
+			<fixedlist>
+			</fixedlist>
+			<improvedlist>
+				<improved>新增“右侧第七”目标排位</improved>
+				<improved>新增右键“调整选中词”功能，支持对选中的词单独开始调词</improved>
+			</improvedlist>
+			<files>
+				<file name="RankUpdate.zip" ext="ZIP" version="1.0.0.1" size="1576297" modifieddate="2012-07-02"
+					copyto="%UPDATE%" runafterdownload="true" deleteafterupdate="true" parameters="">
+					<downloads>
+						<download>http://www.ranknowcn.com/updates/files/rank3/RankUpdate.zip</download>
+					</downloads>
+				</file>
+			</files>
+		</language>  
+	</version>
+	<version no="3.0.5.6201" releasedate="2012-06-26 14:30:00">
+		<language type="Chinese" langid="804">
+			<whatsnewlist>
+			</whatsnewlist>
+			<fixedlist>
+			</fixedlist>
+			<improvedlist>
+				<improved>新增：虚高容值功能</improved>
+			</improvedlist>
+			<files>
+				<file name="RankUpdate.zip" ext="ZIP" version="1.0.0.1" size="1576297" modifieddate="2012-06-26"
+					copyto="%UPDATE%" runafterdownload="true" deleteafterupdate="true" parameters="">
+					<downloads>
+						<download>http://www.ranknowcn.com/updates/files/rank3/RankUpdate.zip</download>
+					</downloads>
+				</file>
+			</files>
+		</language>  
+	</version>
+	<version no="3.0.5.6193" releasedate="2012-06-20 17:00:00">
+		<language type="Chinese" langid="804">
+			<whatsnewlist>
+			</whatsnewlist>
+			<fixedlist>
+				<bugfixed>修复某些用户，新增关键无法加载问题</bugfixed>
+			</fixedlist>
+			<improvedlist>
+				<improved>软件崩溃报告功能优化</improved>
+			</improvedlist>
+			<files>
+				<file name="RankUpdate.zip" ext="ZIP" version="1.0.0.1" size="1576297" modifieddate="2012-06-20"
+					copyto="%UPDATE%" runafterdownload="true" deleteafterupdate="true" parameters="">
+					<downloads>
+						<download>http://www.ranknowcn.com/updates/files/rank3/RankUpdate.zip</download>
+					</downloads>
+				</file>
+			</files>
+		</language>  
+	</version>
+	<version no="3.0.5.6151" releasedate="2012-06-15 17:00:00">
+		<language type="Chinese" langid="804">
+			<whatsnewlist>
+			</whatsnewlist>
+			<fixedlist>
+				<bugfixed>自动升级程序，可能不提示升级问题修复</bugfixed>
+			</fixedlist>
+			<improvedlist>
+				<improved>右键：报告关键词异常功能完善</improved>
+				<improved>帐号验证机制强化</improved>
+				<improved>双击/右键查排位功能强化，防止出错</improved>
+			</improvedlist>
+			<files>
+				<file name="RankUpdate.zip" ext="ZIP" version="1.0.0.1" size="1576297" modifieddate="2012-06-15"
+					copyto="%UPDATE%" runafterdownload="true" deleteafterupdate="true" parameters="">
+					<downloads>
+						<download>http://www.ranknowcn.com/updates/files/rank3/RankUpdate.zip</download>
+					</downloads>
+				</file>
+			</files>
+		</language>  
+	</version>
+	<version no="3.0.5.6141" releasedate="2012-06-14 22:00:00">
+		<language type="Chinese" langid="804">
+			<whatsnewlist>
+			</whatsnewlist>
+			<fixedlist>
+				<bugfixed>修复调词过程中可能产生的错误</bugfixed>
+			</fixedlist>
+			<improvedlist>
+				<improved>调词过程中，日志输出优化</improved>
+				<improved>新增右键报告调词异常功能</improved>
+				<improved>更新账户状态，如果遇到禁止，软件提示功能优化</improved>
+			</improvedlist>
+			<files>
+				<file name="RankUpdate.zip" ext="ZIP" version="1.0.0.1" size="1576297" modifieddate="2012-06-14"
+					copyto="%UPDATE%" runafterdownload="true" deleteafterupdate="true" parameters="">
+					<downloads>
+						<download>http://www.ranknowcn.com/updates/files/rank3/RankUpdate.zip</download>
+					</downloads>
+				</file>
+			</files>
+		</language>  
+	</version>
+	<version no="3.0.5.6131" releasedate="2012-06-13 17:00:00">
+		<language type="Chinese" langid="804">
+			<whatsnewlist>
+			</whatsnewlist>
+			<fixedlist>
+				<bugfixed>修复软件出错：自动循环调词可能导致的出错</bugfixed>
+				<bugfixed>修复：上一位 下一位，可能出现的，在重复调词中不清理的问题</bugfixed>
+				<bugfixed>异地调词：程序内部数据清理工作优化</bugfixed>
+			</fixedlist>
+			<improvedlist>
+				<improved>三种不同调词模式下，出价策略优化（精确 普通 快速模式）</improved>
+				<improved>精确调词模式新增功能：关键词结果排位高于目标排位问题，减少出现该问题的数量，优化出价</improved>
+				<improved>新增“顶部第四”排位</improved>
+			</improvedlist>
+			<files>
+				<file name="RankUpdate.zip" ext="ZIP" version="1.0.0.1" size="1576297" modifieddate="2012-06-13"
+					copyto="%UPDATE%" runafterdownload="true" deleteafterupdate="true" parameters="">
+					<downloads>
+						<download>http://www.ranknowcn.com/updates/files/rank3/RankUpdate.zip</download>
+					</downloads>
+				</file>
+			</files>
+		</language>  
+	</version>
+	<version no="3.0.4.6081" releasedate="2012-06-08 16:00:00">
+		<language type="Chinese" langid="804">
+			<whatsnewlist>
+			</whatsnewlist>
+			<fixedlist>
+				<bugfixed>修复智能调词时，可能导致的卡住问题</bugfixed>
+			</fixedlist>
+			<improvedlist>
+				<improved>优化软件内存使用情况</improved>
+				<improved>优化软件日志记录</improved>
+			</improvedlist>
+			<files>
+				<file name="RankUpdate.zip" ext="ZIP" version="1.0.0.1" size="1576297" modifieddate="2012-06-08"
+					copyto="%UPDATE%" runafterdownload="true" deleteafterupdate="true" parameters="">
+					<downloads>
+						<download>http://www.ranknowcn.com/updates/files/rank3/RankUpdate.zip</download>
+					</downloads>
+				</file>
+			</files>
+		</language>  
+	</version>
+	<version no="3.0.4.6051" releasedate="2012-06-05 17:30:00">
+		<language type="Chinese" langid="804">
+			<whatsnewlist>
+			</whatsnewlist>
+			<fixedlist>
+				<bugfixed>修复智能调词时，可能导致的卡住问题</bugfixed>
+			</fixedlist>
+			<improvedlist>
+				<improved>优化软件内存使用情况</improved>
+				<improved>优化软件日志记录</improved>
+			</improvedlist>
+			<files>
+				<file name="RankUpdate.zip" ext="ZIP" version="1.0.0.1" size="1576297" modifieddate="2012-06-05"
+					copyto="%UPDATE%" runafterdownload="true" deleteafterupdate="true" parameters="">
+					<downloads>
+						<download>http://www.ranknowcn.com/updates/files/rank3/RankUpdate.zip</download>
+					</downloads>
+				</file>
+			</files>
+		</language>  
+	</version>
+	<version no="3.0.4.5292" releasedate="2012-05-29 16:30:00">
+		<language type="Chinese" langid="804">
+			<whatsnewlist>
+			</whatsnewlist>
+			<fixedlist>
+				<bugfixed>修复开始调词时可能的出错问题</bugfixed>
+				<bugfixed>修复“当前排位”列，点击更新显示异常问题</bugfixed>
+			</fixedlist>
+			<improvedlist>
+				<improved>异地调词优化，增强稳定性</improved>
+				<improved>自动升级程序优化</improved>
+			</improvedlist>
+			<files>
+				<file name="RankUpdate.zip" ext="ZIP" version="1.0.0.1" size="1576297" modifieddate="2012-05-29"
+					copyto="%UPDATE%" runafterdownload="true" deleteafterupdate="true" parameters="">
+					<downloads>
+						<download>http://www.ranknowcn.com/updates/files/rank3/RankUpdate.zip</download>
+					</downloads>
+				</file>
+			</files>
+		</language>  
+	</version>
+	<version no="3.0.4.5281" releasedate="2012-05-28 16:30:00">
+		<language type="Chinese" langid="804">
+			<whatsnewlist>
+			</whatsnewlist>
+			<fixedlist>
+				<bugfixed>修复“关键词无所属单元”问题</bugfixed>
+			</fixedlist>
+			<improvedlist>
+				<improved>调词进度窗口 优化每词平均时间显示格式</improved>
+			</improvedlist>
+			<files>
+				<file name="RankUpdate.zip" ext="ZIP" version="1.0.0.1" size="1576297" modifieddate="2012-05-28"
+					copyto="%UPDATE%" runafterdownload="true" deleteafterupdate="true" parameters="">
+					<downloads>
+						<download>http://www.ranknowcn.com/updates/files/rank3/RankUpdate.zip</download>
+					</downloads>
+				</file>
+			</files>
+		</language>  
+	</version>
+	<version no="3.0.4.5021" releasedate="2012-05-02 14:00:00">
+		<language type="Chinese" langid="804">
+			<whatsnewlist>
+			</whatsnewlist>
+			<fixedlist>
+				<bugfixed>修复了少数用户无法完成调词</bugfixed>
+			</fixedlist>
+			<improvedlist>
+			</improvedlist>
+			<files>
+				<file name="RankUpdate.zip" ext="ZIP" version="1.0.0.1" size="1576297" modifieddate="2012-05-02"
+					copyto="%UPDATE%" runafterdownload="true" deleteafterupdate="true" parameters="">
+					<downloads>
+						<download>http://www.ranknowcn.com/updates/files/rank3/RankUpdate.zip</download>
+					</downloads>
+				</file>
+			</files>
+		</language>  
+	</version>
+	<version no="3.0.4.4271" releasedate="2012-04-27 17:19:00">
+		<language type="Chinese" langid="804">
+			<whatsnewlist>
+				<whatsnew>标题栏增加程序地址</whatsnew>
+			</whatsnewlist>
+			<fixedlist>
+				<bugfixed>更多优化和错误修复</bugfixed>
+				<bugfixed>修复搜索关键词的错误</bugfixed>
+				<bugfixed>修正自动调词立即开始等待30秒</bugfixed>
+			</fixedlist>
+			<improvedlist>
+			</improvedlist>
+			<files>
+				<file name="RankUpdate.zip" ext="ZIP" version="1.0.0.1" size="1576051" modifieddate="2012-04-27"
+					copyto="%UPDATE%" runafterdownload="true" deleteafterupdate="true" parameters="">
+					<downloads>
+						<download>http://www.ranknowcn.com/updates/files/rank3/RankUpdate.zip</download>
+					</downloads>
+				</file>
+			</files>
+		</language>  
+	</version>
+	<version no="3.0.4.4261" releasedate="2012-04-26 18:27:00">
+		<language type="Chinese" langid="804">
+			<whatsnewlist>
+			</whatsnewlist>
+			<fixedlist>
+				<bugfixed>特定关键词问题修复</bugfixed>
+				<bugfixed>左侧树，调词启动后被禁止操作问题修复</bugfixed>
+			</fixedlist>
+			<improvedlist>
+			</improvedlist>
+			<files>
+				<file name="RankUpdate.zip" ext="ZIP" version="1.0.0.1" size="1933726" modifieddate="2012-04-26"
+					copyto="%UPDATE%" runafterdownload="true" deleteafterupdate="true" parameters="">
+					<downloads>
+						<download>http://www.ranknowcn.com/updates/files/rank3/RankUpdate.zip</download>
+					</downloads>
+				</file>
+			</files>
+		</language>  
+	</version>
+	<version no="3.0.4.4231" releasedate="2012-04-23 16:27:00">
+		<language type="Chinese" langid="804">
+			<whatsnewlist>
+			</whatsnewlist>
+			<fixedlist>
+				<bugfixed>调词过程中“上一位/下一位”显示Bug修复</bugfixed>
+				<bugfixed>调词过程中可能出现的排位不变化Bug修复</bugfixed>
+				<bugfixed>调词结束时可能出现的一个崩溃修复</bugfixed>
+			</fixedlist>
+			<improvedlist>
+			</improvedlist>
+			<files>
+				<file name="RankUpdate.zip" ext="ZIP" version="1.0.0.1" size="1535311" modifieddate="2012-04-23"
+					copyto="%UPDATE%" runafterdownload="true" deleteafterupdate="true" parameters="">
+					<downloads>
+						<download>http://www.ranknowcn.com/updates/files/rank3/RankUpdate.zip</download>
+					</downloads>
+				</file>
+			</files>
+		</language>  
+	</version>
+	<version no="3.0.4.4202" releasedate="2012-04-20 22:27:00">
+		<language type="Chinese" langid="804">
+			<whatsnewlist>
+			</whatsnewlist>
+			<fixedlist>
+				<bugfixed>特殊密码无法登陆</bugfixed>
+				<bugfixed>修复某些帐号不能登录问题</bugfixed>
+				<bugfixed>修复设置的价格过低导致的搜索无效问题</bugfixed>
+			</fixedlist>
+			<improvedlist>
+			</improvedlist>
+			<files>
+				<file name="RankUpdate.zip" ext="ZIP" version="1.0.0.1" size="1568768" modifieddate="2012-04-20"
+					copyto="%UPDATE%" runafterdownload="true" deleteafterupdate="true" parameters="">
+					<downloads>
+						<download>http://www.ranknowcn.com/updates/files/rank3/RankUpdate.zip</download>
+					</downloads>
+				</file>
+			</files>
+		</language>  
+	</version>
+	<version no="3.0.4.4191" releasedate="2012-04-19 18:27:00">
+		<language type="Chinese" langid="804">
+			<whatsnewlist>
+			</whatsnewlist>
+			<fixedlist>
+				<bugfixed>修复调词结束时弹出的错误消息框</bugfixed>
+				<bugfixed>修复“上一位/下一位”显示Bug</bugfixed>
+				<bugfixed>丰富日志记录，查询问题</bugfixed>
+			</fixedlist>
+			<improvedlist>
+			</improvedlist>
+			<files>
+				<file name="RankUpdate.zip" ext="ZIP" version="1.0.0.1" size="1492659" modifieddate="2012-04-19"
+					copyto="%UPDATE%" runafterdownload="true" deleteafterupdate="true" parameters="">
+					<downloads>
+						<download>http://www.ranknowcn.com/updates/files/rank3/RankUpdate.zip</download>
+					</downloads>
+				</file>
+			</files>
+		</language>  
+	</version>
+	<version no="3.0.4.4182" releasedate="2012-04-18 18:27:00">
+		<language type="Chinese" langid="804">
+			<whatsnewlist>
+			</whatsnewlist>
+			<fixedlist>
+				<bugfixed>修复特殊选取词功能</bugfixed>
+			</fixedlist>
+			<improvedlist>
+				<improved>调词中部分选项允许修改</improved>
+			</improvedlist>
+			<files>
+				<file name="RankUpdate.zip" ext="ZIP" version="1.0.0.1" size="1492659" modifieddate="2012-04-18"
+					copyto="%UPDATE%" runafterdownload="true" deleteafterupdate="true" parameters="">
+					<downloads>
+						<download>http://www.ranknowcn.com/updates/files/rank3/RankUpdate.zip</download>
+					</downloads>
+				</file>
+			</files>
+		</language>  
+	</version>
+	<version no="3.0.4.4171" releasedate="2012-04-17 17:27:00">
+		<language type="Chinese" langid="804">
+			<whatsnewlist>
+				<whatsnew>增加反选功能</whatsnew>
+			</whatsnewlist>
+			<fixedlist>
+				<bugfixed>优化调词速度</bugfixed>
+			</fixedlist>
+			<improvedlist>
+				<improved>改善被禁止问题</improved>
+			</improvedlist>
+			<files>
+				<file name="RankUpdate.zip" ext="ZIP" version="1.0.0.1" size="1492659" modifieddate="2012-04-17"
+					copyto="%UPDATE%" runafterdownload="true" deleteafterupdate="true" parameters="">
+					<downloads>
+						<download>http://www.ranknowcn.com/updates/files/rank3/RankUpdate.zip</download>
+					</downloads>
+				</file>
+			</files>
+		</language>  
+	</version>
+</update>

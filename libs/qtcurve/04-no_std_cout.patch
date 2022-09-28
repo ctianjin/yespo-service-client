@@ -1,0 +1,15 @@
+Index: style/qtcurve.cpp
+===================================================================
+--- style/qtcurve.cpp   (revision 969)
++++ style/qtcurve.cpp   (working copy)
+@@ -1456,8 +1456,8 @@
+ 
+     if(NULL!=getenv("QTCURVE_DEBUG"))
+     {
+-        QByteArray l1(appName.toLatin1());
+-        std::cout << "QtCurve: Application name: \"" << l1.constData() << "\"\n";
++        //QByteArray l1(appName.toLatin1());
++        //std::cout << "QtCurve: Application name: \"" << l1.constData() << "\"\n";
+     }
+ 
+     if(APP_REKONQ==theThemedApp)

@@ -1,0 +1,139 @@
+$type sqlite
+$name user
+$version 1.0.5
+$display_name User
+$file_name user.dat
+
+%encoding UTF-16
+%default_cache_size 8000
+
+enum[call_type]
+{
+    call_in_type
+    call_out_type
+	call_missed_type
+	call_successful_type
+	call_unknown_type       99
+}
+
+enum[upload_status]
+{
+    idle
+    uploading
+	uploaded
+	unknown                 99
+}
+
+login_history
+{
+    user_name           string primary_key not_null
+    password            string
+    remember_password   bool[10] not_null default=0
+    login_time          time_t
+}
+
+call_record
+{
+	id                   identity
+	owner                string
+    cdr_id               string
+    meet_cdr_id          string
+	small_photo          string
+	display_name         string
+	start_call_time      string
+	call_time            string
+	is_answered          string
+	call_mode            string
+	cdr_type             string
+	caller_ve_sys_id     string
+	caller_id            string
+	caller_ve_login_id   string
+	caller_display_name  string
+	caller_mobile        string
+	caller_small_photo   string
+	caller_large_photo   string
+	is_pstn_call         string
+	call_country         string
+	callee_ve_sys_id     string
+	callee_id            string
+	callee_ve_login_id   string
+	callee_display_name  string
+	callee_mobile        string
+	callee_small_photo   string
+	callee_large_photo   string
+	partner_sys_id       string
+	partner_id           string
+	partner_login_id     string
+	partner_display_name string
+	partner_small_photo  string
+	partner_large_photo  string
+	is_free              string
+	partner_level        string
+	language_1           string
+	language_2           string
+	is_success           string
+}
+
+screenshot
+{
+	id                  identity
+	owner               string
+	status              enum[upload_status]
+	meet_cdr_id         string
+	photo               string
+}
+
+blacklist
+{
+	id                  identity
+	owner               string
+	uniqueId            string
+	blacklist_id        string
+	partner_sys_id      string
+	ve_sys_id           string
+	display_name        string
+	small_photo         string
+}
+
+contact
+{
+	id                  identity
+	user_name           string not_null
+	cid                 string
+	add_book_id         string
+	contact_name        string
+	small_photo         string
+	large_photo         string
+	phone               string
+	voicera_id          string
+	sip_caller_id       string
+	source_language     string
+	target_language     string
+	online_status       string
+	system_user         string
+	photoFile           string
+	total_size          string
+	available_size      string
+}
+
+phone_history
+{
+	id                  identity
+	user_name           string not_null
+	meet_cdr_id         string not_null
+	cid                 string
+	caller_id           string
+	deduction_time      string
+	call_time           string
+	contact_name        string
+	small_photo         string
+	large_photo         string
+	call_status         string
+	call_mode           string
+	deduction_cost      string
+	source_language     string
+	target_language     string
+	pstn_country        string
+	voicera_id          string
+	photoFile           string
+}

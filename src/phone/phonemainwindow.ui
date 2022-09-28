@@ -1,0 +1,1217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Qpid::PhoneMainWindow</class>
+ <widget class="QMainWindow" name="Qpid::PhoneMainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>748</width>
+    <height>602</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Voice Easy</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#window {
+	background: #ffffff;
+}
+
+/* Page Sign in*/
+#pageLogin {
+	background: #ebf7ff;
+}
+
+#pageLogin #frameLoginLogo QLabel {
+	min-width: 218px;
+	min-height: 58px;
+	border-image: url(:/images/ui/ve_logo.png);
+}
+
+#pageLogin #labelMessage {
+	background: #ffffca;
+	min-height: 27px;
+}
+
+#pageLogin #frameLoginMain #labelSignin {
+	font-family: Segoe UI;
+	font-size: 24px;
+	color: #282828;
+}
+
+#pageLogin #frameLoginMain QLineEdit {
+	min-height: 28px;
+	border: 1px solid #cccccc;
+}
+
+#pageLogin #frameLoginMain QCheckBox {
+	font-family: Arial;
+	font-size: 12px;
+	color: #282828;
+}
+
+#pageLogin #frameLoginMain #pushButtonSignin {
+	border: 0px;
+	font-family: Segoe UI;
+	font-size: 18px;
+	font-weight: bold;
+	min-height: 37px;
+	border-radius: 18px;
+	background: qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 #3e90ca, stop: 0.5 #3b88be, stop:1 #3780b5);
+	color: #ffffff;
+}
+
+#pageLogin #frameLoginBottom {
+	background: #3980b4;
+	min-height: 65px;
+}
+
+#pageLogin #frameLoginBottom QPushButton {
+	font-family: Arial;
+	font-size: 13px;
+	border: 0px;
+}
+
+#pageLogin #frameLoginBottom #pushButtonCreateAccount {
+	font-weight: bold;
+	color: #ffffff;
+}
+
+#pageLogin #frameLoginBottom #pushButtonForgetPassword {
+	color: #b2dfff;
+	text-decoration: underline;
+}
+
+/* Main Window*/
+#pageMain #framePhoto QLabel {
+	border-image: url(:/images/ui/default_photo.jpg);
+}
+
+#pageMain #frameInfomation QLineEdit {
+	border: 0px;
+	background: transparent;
+}
+
+#pageMain #frameInfomation #lineEditName {
+	font-size: 13px;
+	font-weight: bold;
+	color: #282828;
+}
+
+#pageMain #frameInfomation #lineEditCredit {
+	font-family: Segoe UI;
+	font-size: 12px;
+	color: #ffffff;
+	min-height: 18px;
+	border-image: url(:/images/ui/credit_bg.png);
+	padding-left: 7px;
+}
+
+#pageMain #frameInfomation #pushButtonAddCredit {
+	font-family: Segoe UI;
+	font-size: 12px;
+	color: #ffffff;
+	min-height: 18px;
+	border-image: url(:/images/ui/add_credit_bg.png);
+	min-width: 44px;
+}
+
+#lineEditSearch {
+	min-height: 30px;
+	padding-left: 30px;
+	border: 1px solid #c3c3c3;
+}
+
+#frameItemView {
+	border: 1px solid #c3c3c3;
+}
+
+#frameViewTabs {
+	border-top: 0px solid #c3c3c3;
+	/*border-bottom: 1px solid #c3c3c3;*/
+}
+
+#frameViewTabs QPushButton {
+	color: #282828;
+	border: 0px;
+	min-height: 40px;
+	font-size: 12px;
+	font-weight: bold;
+	background: #e5e5e5;
+	border-bottom: 1px solid #c3c3c3;
+}
+
+#frameViewTabs QPushButton:checked {
+	background: #ffffff;
+	border-bottom: 0px;
+}
+
+#frameViewTabs #pushButtonContacts {
+	border-right: 1px solid #c3c3c3;
+}
+
+#frameContactFilter,#frameRecentFilter {
+	border: 0px;
+	min-height: 21px;
+	border-radius: 10px;
+}
+
+#frameContactFilter:hover,#frameRecentFilter:hover {
+	background: #e5e5e5;
+}
+
+#pushButtonContactsFilter,#pushButtonRecentFilter {
+	border: 0px;
+	font-weight: bold;
+}
+
+#pushButtonContactsFilter::menu-indicator, #pushButtonRecentFilter::menu-indicator {
+	padding-left: 5px;
+	image: url(:/images/ui/arrow_down.png);
+	subcontrol-origin: padding;
+	subcontrol-position: right;
+	top: 1px;
+}
+
+#pushButtonContactsFilter::menu-indicator:pressed,#pushButtonContactsFilter::menu-indicator:open,#pushButtonRecentFilter::menu-indicator:pressed,#pushButtonRecentFilter::menu-indicator:open {
+	position: relative;
+	top: 2px; 
+	left: 1px;
+}
+
+#frameMainLeftTop {
+	border-top: 0px solid #c3c3c3;
+	border-right: 1px solid #c3c3c3;
+}
+
+#frameMainLeftBottom {
+	border-top: 1px solid #c3c3c3;
+	border-right: 1px solid #c3c3c3;
+}
+
+
+/* Tree Widget */
+QTreeView {
+	border: 0px;
+	show-decoration-selected: 1;
+}
+
+QTreeView::item {
+	padding: 3px;
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+}
+
+QTreeView::item:hover {
+	background: #eaf2fa;
+}
+
+QTreeView::item:selected:active{
+	background: #c8e6fa;
+}
+
+QTreeView::item:selected:!active {
+	background: #c8e6fa;
+}
+</string>
+  </property>
+  <widget class="QWidget" name="window">
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="margin">
+     <number>0</number>
+    </property>
+    <item row="0" column="0">
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="pageLogin">
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <property name="margin">
+         <number>0</number>
+        </property>
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>59</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QFrame" name="frameLoginMiddle">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_7">
+           <item>
+            <spacer name="horizontalSpacer_4">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>183</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QFrame" name="frameLoginContainer">
+             <property name="maximumSize">
+              <size>
+               <width>329</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_2">
+              <item>
+               <widget class="QFrame" name="frameLoginLogo">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_2">
+                 <item>
+                  <spacer name="horizontalSpacer_6">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>63</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="labelLogo">
+                   <property name="minimumSize">
+                    <size>
+                     <width>218</width>
+                     <height>58</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>218</width>
+                     <height>58</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_7">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>62</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="labelMessage">
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frameLoginMain">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout">
+                 <property name="spacing">
+                  <number>13</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="labelSignin">
+                   <property name="text">
+                    <string>Sign In</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="Qpid::SmartEdit" name="lineEditAccount"/>
+                 </item>
+                 <item>
+                  <widget class="Qpid::SmartEdit" name="lineEditPassword"/>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="checkBoxAutoSignin">
+                   <property name="focusPolicy">
+                    <enum>Qt::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>Keep me signed in</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButtonSignin">
+                   <property name="focusPolicy">
+                    <enum>Qt::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>Sign in</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_5">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>183</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>58</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QFrame" name="frameLoginBottom">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>237</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButtonCreateAccount">
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="focusPolicy">
+              <enum>Qt::NoFocus</enum>
+             </property>
+             <property name="text">
+              <string>Create an account</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>236</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButtonForgetPassword">
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="focusPolicy">
+              <enum>Qt::NoFocus</enum>
+             </property>
+             <property name="text">
+              <string>Forgotten password?</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="pageMain">
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="margin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QWidget" name="widgetMainLeft" native="true">
+          <property name="minimumSize">
+           <size>
+            <width>260</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>260</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_9">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="margin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QFrame" name="frameMainLeftTop">
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_3">
+              <property name="spacing">
+               <number>6</number>
+              </property>
+              <property name="leftMargin">
+               <number>9</number>
+              </property>
+              <property name="rightMargin">
+               <number>9</number>
+              </property>
+              <item>
+               <widget class="QFrame" name="framePhoto">
+                <property name="minimumSize">
+                 <size>
+                  <width>64</width>
+                  <height>64</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>64</width>
+                  <height>64</height>
+                 </size>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_11">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <property name="margin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="labelPhoto">
+                   <property name="minimumSize">
+                    <size>
+                     <width>64</width>
+                     <height>64</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>64</width>
+                     <height>64</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="scaledContents">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frameInfomation">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_4">
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QLineEdit" name="lineEditName">
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frameCredit">
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_6">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <property name="margin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QLineEdit" name="lineEditCredit">
+                      <property name="readOnly">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pushButtonAddCredit">
+                      <property name="maximumSize">
+                       <size>
+                        <width>42</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
+                      <property name="cursor">
+                       <cursorShape>PointingHandCursor</cursorShape>
+                      </property>
+                      <property name="focusPolicy">
+                       <enum>Qt::NoFocus</enum>
+                      </property>
+                      <property name="text">
+                       <string>Add</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="frameMainLeftBottom">
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_8">
+              <item>
+               <widget class="Qpid::SearchEdit" name="lineEditSearch"/>
+              </item>
+              <item>
+               <widget class="QFrame" name="frameItemView">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_7">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <property name="margin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QFrame" name="frameViewTabs">
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_4">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <property name="margin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QPushButton" name="pushButtonContacts">
+                      <property name="focusPolicy">
+                       <enum>Qt::NoFocus</enum>
+                      </property>
+                      <property name="text">
+                       <string>Contacts</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="phone.qrc">
+                        <normaloff>:/images/ui/icon_contacts.png</normaloff>:/images/ui/icon_contacts.png</iconset>
+                      </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
+                      <property name="checked">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pushButtonRecent">
+                      <property name="focusPolicy">
+                       <enum>Qt::NoFocus</enum>
+                      </property>
+                      <property name="text">
+                       <string>Recent</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="phone.qrc">
+                        <normaloff>:/images/ui/icon_recent.png</normaloff>:/images/ui/icon_recent.png</iconset>
+                      </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QStackedWidget" name="stackedWidgetViews">
+                   <property name="currentIndex">
+                    <number>0</number>
+                   </property>
+                   <widget class="QWidget" name="pageContacts">
+                    <layout class="QVBoxLayout" name="verticalLayout_5">
+                     <property name="leftMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>9</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>0</number>
+                     </property>
+                     <item>
+                      <widget class="QFrame" name="frameContactFilter">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>21</height>
+                        </size>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <layout class="QHBoxLayout" name="horizontalLayout_8">
+                        <property name="spacing">
+                         <number>0</number>
+                        </property>
+                        <property name="leftMargin">
+                         <number>9</number>
+                        </property>
+                        <property name="topMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="rightMargin">
+                         <number>9</number>
+                        </property>
+                        <property name="bottomMargin">
+                         <number>0</number>
+                        </property>
+                        <item>
+                         <widget class="QPushButton" name="pushButtonContactsFilter">
+                          <property name="cursor">
+                           <cursorShape>ArrowCursor</cursorShape>
+                          </property>
+                          <property name="focusPolicy">
+                           <enum>Qt::NoFocus</enum>
+                          </property>
+                          <property name="layoutDirection">
+                           <enum>Qt::LeftToRight</enum>
+                          </property>
+                          <property name="autoFillBackground">
+                           <bool>false</bool>
+                          </property>
+                          <property name="text">
+                           <string>All</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <spacer name="horizontalSpacer_3">
+                          <property name="orientation">
+                           <enum>Qt::Horizontal</enum>
+                          </property>
+                          <property name="sizeHint" stdset="0">
+                           <size>
+                            <width>92</width>
+                            <height>20</height>
+                           </size>
+                          </property>
+                         </spacer>
+                        </item>
+                        <item>
+                         <widget class="QLabel" name="labelFilterDescription">
+                          <property name="text">
+                           <string>Change Contact list</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                       <zorder>pushButtonContactsFilter</zorder>
+                       <zorder>labelFilterDescription</zorder>
+                       <zorder>horizontalSpacer_3</zorder>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="Qpid::ContactsTreeWidget" name="treeWidgetContacts">
+                       <property name="iconSize">
+                        <size>
+                         <width>32</width>
+                         <height>32</height>
+                        </size>
+                       </property>
+                       <property name="indentation">
+                        <number>0</number>
+                       </property>
+                       <property name="sortingEnabled">
+                        <bool>true</bool>
+                       </property>
+                       <attribute name="headerVisible">
+                        <bool>false</bool>
+                       </attribute>
+                       <attribute name="headerMinimumSectionSize">
+                        <number>13</number>
+                       </attribute>
+                       <attribute name="headerStretchLastSection">
+                        <bool>true</bool>
+                       </attribute>
+                       <column>
+                        <property name="text">
+                         <string notr="true">1</string>
+                        </property>
+                       </column>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                   <widget class="QWidget" name="pageRecent">
+                    <layout class="QVBoxLayout" name="verticalLayout_6">
+                     <property name="spacing">
+                      <number>6</number>
+                     </property>
+                     <property name="leftMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>9</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>0</number>
+                     </property>
+                     <item>
+                      <widget class="QFrame" name="frameRecentFilter">
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <layout class="QHBoxLayout" name="horizontalLayout_9">
+                        <property name="spacing">
+                         <number>0</number>
+                        </property>
+                        <property name="topMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="bottomMargin">
+                         <number>0</number>
+                        </property>
+                        <item>
+                         <widget class="QPushButton" name="pushButtonRecentFilter">
+                          <property name="text">
+                           <string>All</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <spacer name="horizontalSpacer_8">
+                          <property name="orientation">
+                           <enum>Qt::Horizontal</enum>
+                          </property>
+                          <property name="sizeHint" stdset="0">
+                           <size>
+                            <width>206</width>
+                            <height>20</height>
+                           </size>
+                          </property>
+                         </spacer>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="Qpid::HistoryTreeWidget" name="treeWidgetRecent">
+                       <property name="iconSize">
+                        <size>
+                         <width>32</width>
+                         <height>32</height>
+                        </size>
+                       </property>
+                       <property name="indentation">
+                        <number>0</number>
+                       </property>
+                       <property name="sortingEnabled">
+                        <bool>true</bool>
+                       </property>
+                       <attribute name="headerVisible">
+                        <bool>false</bool>
+                       </attribute>
+                       <attribute name="headerMinimumSectionSize">
+                        <number>13</number>
+                       </attribute>
+                       <attribute name="headerStretchLastSection">
+                        <bool>false</bool>
+                       </attribute>
+                       <column>
+                        <property name="text">
+                         <string notr="true">1</string>
+                        </property>
+                       </column>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="widgetMainRight" native="true">
+          <layout class="QVBoxLayout" name="verticalLayout_10" stretch="1,0,0">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="margin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="Qpid::PhoneView" name="phoneView" native="true"/>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>0</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="Qpid::PhoneCallingView" name="widgetCallMinimize" native="true">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>70</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>70</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>748</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuVoice_Easy">
+    <property name="title">
+     <string>Voice Easy</string>
+    </property>
+    <addaction name="actionSign_Out"/>
+    <addaction name="actionClose"/>
+   </widget>
+   <widget class="QMenu" name="menuTools">
+    <property name="title">
+     <string>Tools</string>
+    </property>
+    <widget class="QMenu" name="menuChange_Language">
+     <property name="title">
+      <string>Change Language</string>
+     </property>
+     <addaction name="actionEnglish"/>
+     <addaction name="actionChinese"/>
+    </widget>
+    <addaction name="menuChange_Language"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout_Voice_Easy"/>
+   </widget>
+   <addaction name="menuVoice_Easy"/>
+   <addaction name="menuTools"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <action name="actionClose">
+   <property name="text">
+    <string>Close</string>
+   </property>
+  </action>
+  <action name="actionAbout_Voice_Easy">
+   <property name="text">
+    <string>About Voice Easy</string>
+   </property>
+  </action>
+  <action name="actionAll">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>All</string>
+   </property>
+  </action>
+  <action name="actionVoice_Easy_Users">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Voice Easy Users</string>
+   </property>
+  </action>
+  <action name="actionPhone_Numbers">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Phone Numbers</string>
+   </property>
+  </action>
+  <action name="actionSign_Out">
+   <property name="text">
+    <string>Sign Out</string>
+   </property>
+  </action>
+  <action name="actionRecentAll">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>All</string>
+   </property>
+  </action>
+  <action name="actionRecentMissed">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Missed</string>
+   </property>
+   <property name="toolTip">
+    <string>Missed</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+  <action name="actionEnglish">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>English</string>
+   </property>
+  </action>
+  <action name="actionChinese">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Chinese</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Qpid::SearchEdit</class>
+   <extends>QLineEdit</extends>
+   <header>searchedit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>Qpid::SmartEdit</class>
+   <extends>QLineEdit</extends>
+   <header>smartedit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>Qpid::PhoneView</class>
+   <extends>QWidget</extends>
+   <header>phoneview.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Qpid::PhoneCallingView</class>
+   <extends>QWidget</extends>
+   <header>phonecallingview.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Qpid::ContactsTreeWidget</class>
+   <extends>QTreeWidget</extends>
+   <header>contactstreewidget.h</header>
+  </customwidget>
+  <customwidget>
+   <class>Qpid::HistoryTreeWidget</class>
+   <extends>QTreeWidget</extends>
+   <header>historytreewidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="phone.qrc"/>
+ </resources>
+ <connections/>
+</ui>

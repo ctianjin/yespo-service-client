@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Qpid::PopupDTMF</class>
+ <widget class="QWidget" name="Qpid::PopupDTMF">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>247</width>
+    <height>150</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Voice Easy</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#widget {
+	border: 1px solid #cccccc;
+	background: #cccccc;
+	/*border-radius: 7px;*/
+}
+
+#lineEditDTMF {
+	border: 1px solid #cccccc;
+	border-bottom: 0px;
+	/*border-top-left-radius: 7px;
+	border-bottom-left-radius: 0px;
+	border-top-right-radius: 7px;
+	border-bottom-right-radius: 0px;*/
+	min-height: 27px;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="margin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QWidget" name="widget" native="true">
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="margin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QLineEdit" name="lineEditDTMF">
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="Qpid::DTMFPlate" name="widgetDTMFPlate" native="true"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Qpid::DTMFPlate</class>
+   <extends>QWidget</extends>
+   <header>dtmfplate.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="phone.qrc"/>
+ </resources>
+ <connections/>
+</ui>

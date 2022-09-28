@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ns::PhoneMainWindow</class>
+ <widget class="QMainWindow" name="ns::PhoneMainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>952</width>
+    <height>672</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>952</width>
+    <height>672</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>952</width>
+    <height>672</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>YesPo Service Client</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">* {
+	font-family: Verdana,&quot;宋体&quot;,  Arial, Sans-serif, Segoe UI, Tahoma;
+}
+
+/* Menu style begin */
+QMenu {
+	background-color: #ffffff;
+	border: 1px solid #666666;
+	border-radius: 1px;
+}
+
+QMenu::item {
+	padding: 0px 25px 0px 39px;
+	min-height: 30px;
+	min-width: 100px;
+}
+
+QMenu::item:selected {
+    background: #e9edf0;
+}
+
+QMenu::item:checked {
+    background: #328fdd;
+	color: #ffffff;
+}
+
+QMenu::icon { 
+	background: #e9edf0;
+	min-height: 30px;
+	min-width: 30px;
+	max-height: 30px;
+	max-width: 30px;
+}
+
+QMenu::icon:checked {
+	background: #328fdd;
+}
+
+QMenu::separator {
+	background: #e9edf0;
+	height: 1px;
+}
+
+/* End of menu style */
+
+#window {
+	background: transparent;
+}
+
+#window #widgetOuter {
+	border: 1px solid #17242D;
+	border-radius: 4px;
+}
+
+#window #widgetInner {
+	background-image: url(:/images/ui/welcome_background.png);
+	/*border: 1px solid rgba(87,163,211);*/
+	border-radius:4px;
+}
+
+
+#window #stackedWidget {
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+/* css of caption */
+#frameCaption {
+/*	background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 #0078c7, stop: 1.0 #016aae);*/
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	border-top: 1px solid #57A3D3;
+	border-left: 1px solid #57A3D3;
+	border-right: 1px solid #57A3D3;
+}
+
+#frameCaption #labelCaptionLogo {
+	background-image: url(:/images/ui/logo.png);
+	background-repeat: none;
+	background-position: center;
+	max-width: 32px;
+	min-width: 32px;
+	max-height: 32px;
+	min-height: 32px;
+}
+
+#frameCaption #labelCaptionTitle {
+	font-size: 13px;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+#frameCaption #frameSystemMenu {
+	border: 0px;
+}
+
+#frameCaption #frameSystemMenu #sysPanelContainer {
+	border: 0px;
+}
+
+#frameCaption #pushButtonSystemHome {
+	border-image: url(:/images/ui/caption_home.png);
+}
+
+#frameCaption #pushButtonSystemHome:hover {
+	border-image: url(:/images/ui/caption_home_hover.png);
+}
+
+#frameCaption #pushButtonSystemHome:pressed {
+	border-image: url(:/images/ui/caption_home_pressed.png);
+}
+
+#frameCaption #pushButtonSystemMenu {
+	border-image: url(:/images/ui/caption_menu.png);
+}
+
+#frameCaption #pushButtonSystemMenu::menu-indicator {
+	image: url(:/images/ui/none.png);
+}
+
+#frameCaption #pushButtonSystemMenu:hover {
+	border-image: url(:/images/ui/caption_menu_hover.png);
+}
+
+#frameCaption #pushButtonSystemMenu:pressed {
+	border-image: url(:/images/ui/caption_menu_pressed.png);
+}
+
+#frameCaption #pushButtonSystemMinimize {
+	border-image: url(:/images/ui/caption_minimize.png);
+}
+
+#frameCaption #pushButtonSystemMinimize:hover {
+	border-image: url(:/images/ui/caption_minimize_hover.png);
+}
+
+#frameCaption #pushButtonSystemMinimize:pressed {
+	border-image: url(:/images/ui/caption_minimize_pressed.png);
+}
+
+#frameCaption #pushButtonSystemClose {
+	border-image: url(:/images/ui/caption_close.png);
+}
+
+#frameCaption #pushButtonSystemClose:hover {
+	border-image: url(:/images/ui/caption_close_hover.png);
+}
+
+#frameCaption #pushButtonSystemClose:pressed {
+	border-image: url(:/images/ui/caption_close_pressed.png);
+}
+
+/* end of css caption */
+
+/* */
+
+/* */
+
+</string>
+  </property>
+  <widget class="QWidget" name="window">
+   <property name="minimumSize">
+    <size>
+     <width>952</width>
+     <height>672</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>952</width>
+     <height>672</height>
+    </size>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_4">
+    <property name="spacing">
+     <number>6</number>
+    </property>
+    <property name="margin">
+     <number>35</number>
+    </property>
+    <item>
+     <widget class="QWidget" name="widgetOuter" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>880</width>
+        <height>600</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>880</width>
+        <height>600</height>
+       </size>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="margin">
+        <number>1</number>
+       </property>
+       <item>
+        <widget class="QWidget" name="widgetInner" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>878</width>
+           <height>598</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>878</width>
+           <height>598</height>
+          </size>
+         </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="margin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QFrame" name="frameCaption">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>31</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>31</height>
+             </size>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="margin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="labelCaptionLogo">
+               <property name="minimumSize">
+                <size>
+                 <width>32</width>
+                 <height>32</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>32</width>
+                 <height>32</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="labelCaptionTitle">
+               <property name="text">
+                <string>YesPo Service Client</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>68</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QFrame" name="frameSystemMenu">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>1</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QFrame" name="sysPanelContainer">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::StyledPanel</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Raised</enum>
+                  </property>
+                  <layout class="QHBoxLayout" name="horizontalLayout">
+                   <property name="spacing">
+                    <number>0</number>
+                   </property>
+                   <property name="margin">
+                    <number>0</number>
+                   </property>
+                   <item>
+                    <widget class="QPushButton" name="pushButtonSystemHome">
+                     <property name="minimumSize">
+                      <size>
+                       <width>35</width>
+                       <height>36</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>35</width>
+                       <height>36</height>
+                      </size>
+                     </property>
+                     <property name="cursor">
+                      <cursorShape>PointingHandCursor</cursorShape>
+                     </property>
+                     <property name="focusPolicy">
+                      <enum>Qt::NoFocus</enum>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="pushButtonSipSetting">
+                     <property name="minimumSize">
+                      <size>
+                       <width>35</width>
+                       <height>36</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>35</width>
+                       <height>36</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>PushButton</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="pushButtonSystemMenu">
+                     <property name="minimumSize">
+                      <size>
+                       <width>35</width>
+                       <height>36</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>35</width>
+                       <height>36</height>
+                      </size>
+                     </property>
+                     <property name="cursor">
+                      <cursorShape>PointingHandCursor</cursorShape>
+                     </property>
+                     <property name="focusPolicy">
+                      <enum>Qt::NoFocus</enum>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="pushButtonSystemMinimize">
+                     <property name="minimumSize">
+                      <size>
+                       <width>35</width>
+                       <height>36</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>35</width>
+                       <height>36</height>
+                      </size>
+                     </property>
+                     <property name="cursor">
+                      <cursorShape>PointingHandCursor</cursorShape>
+                     </property>
+                     <property name="focusPolicy">
+                      <enum>Qt::NoFocus</enum>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="pushButtonSystemClose">
+                     <property name="minimumSize">
+                      <size>
+                       <width>35</width>
+                       <height>36</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>35</width>
+                       <height>36</height>
+                      </size>
+                     </property>
+                     <property name="cursor">
+                      <cursorShape>PointingHandCursor</cursorShape>
+                     </property>
+                     <property name="focusPolicy">
+                      <enum>Qt::NoFocus</enum>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+            <zorder>labelCaptionTitle</zorder>
+            <zorder>labelCaptionLogo</zorder>
+            <zorder>frameSystemMenu</zorder>
+           </widget>
+          </item>
+          <item>
+           <widget class="QStackedWidget" name="stackedWidget">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
+            <property name="currentIndex">
+             <number>2</number>
+            </property>
+            <widget class="ns::PageWelcome" name="pageWelcome"/>
+            <widget class="ns::PageFrameWindow" name="pageFrameWindow"/>
+            <widget class="ns::PageCalling" name="pageCalling"/>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <action name="actionQuit">
+   <property name="icon">
+    <iconset resource="translator.qrc">
+     <normaloff>:/images/ui/act_quit.png</normaloff>:/images/ui/act_quit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+  <action name="actionReport">
+   <property name="icon">
+    <iconset resource="translator.qrc">
+     <normaloff>:/images/ui/act_report.png</normaloff>:/images/ui/act_report.png</iconset>
+   </property>
+   <property name="text">
+    <string>Report</string>
+   </property>
+   <property name="toolTip">
+    <string>Report</string>
+   </property>
+  </action>
+  <action name="actionHistory">
+   <property name="icon">
+    <iconset resource="translator.qrc">
+     <normaloff>:/images/ui/act_recent.png</normaloff>:/images/ui/act_recent.png</iconset>
+   </property>
+   <property name="text">
+    <string>Call History</string>
+   </property>
+  </action>
+  <action name="actionProfile">
+   <property name="icon">
+    <iconset resource="translator.qrc">
+     <normaloff>:/images/ui/act_profile.png</normaloff>:/images/ui/act_profile.png</iconset>
+   </property>
+   <property name="text">
+    <string>My Profile</string>
+   </property>
+  </action>
+  <action name="actionStatusReady">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/images/ui/status_ready_16.png</normaloff>:/images/ui/status_ready_16.png</iconset>
+   </property>
+   <property name="text">
+    <string>Call Status Ready</string>
+   </property>
+  </action>
+  <action name="actionStatusBusy">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/images/ui/status_busy_16.png</normaloff>:/images/ui/status_busy_16.png</iconset>
+   </property>
+   <property name="text">
+    <string>Call Status Busy</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="icon">
+    <iconset resource="translator.qrc">
+     <normaloff>:/images/ui/act_about.png</normaloff>:/images/ui/act_about.png</iconset>
+   </property>
+   <property name="text">
+    <string>About</string>
+   </property>
+   <property name="toolTip">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionUpdate">
+   <property name="icon">
+    <iconset resource="translator.qrc">
+     <normaloff>:/images/ui/act_update.png</normaloff>:/images/ui/act_update.png</iconset>
+   </property>
+   <property name="text">
+    <string>Check Update</string>
+   </property>
+   <property name="toolTip">
+    <string>Check Update</string>
+   </property>
+  </action>
+  <action name="actionHome">
+   <property name="icon">
+    <iconset resource="translator.qrc">
+     <normaloff>:/images/ui/act_home.png</normaloff>:/images/ui/act_home.png</iconset>
+   </property>
+   <property name="text">
+    <string>Home</string>
+   </property>
+  </action>
+  <action name="actionSettings">
+   <property name="icon">
+    <iconset resource="translator.qrc">
+     <normaloff>:/images/ui/act_setting.png</normaloff>:/images/ui/act_setting.png</iconset>
+   </property>
+   <property name="text">
+    <string>Settings</string>
+   </property>
+  </action>
+  <action name="actionDevice">
+   <property name="icon">
+    <iconset resource="translator.qrc">
+     <normaloff>:/images/ui/act_device.png</normaloff>:/images/ui/act_device.png</iconset>
+   </property>
+   <property name="text">
+    <string>Device</string>
+   </property>
+  </action>
+  <action name="actionPrivacy">
+   <property name="icon">
+    <iconset resource="translator.qrc">
+     <normaloff>:/images/ui/act_privacy.png</normaloff>:/images/ui/act_privacy.png</iconset>
+   </property>
+   <property name="text">
+    <string>Privacy</string>
+   </property>
+  </action>
+  <action name="actionPassword">
+   <property name="icon">
+    <iconset resource="translator.qrc">
+     <normaloff>:/images/ui/act_password.png</normaloff>:/images/ui/act_password.png</iconset>
+   </property>
+   <property name="text">
+    <string>Password</string>
+   </property>
+  </action>
+  <action name="actionLogout">
+   <property name="icon">
+    <iconset resource="translator.qrc">
+     <normaloff>:/images/ui/act_logout.png</normaloff>:/images/ui/act_logout.png</iconset>
+   </property>
+   <property name="text">
+    <string>Logout</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ns::PageWelcome</class>
+   <extends>QWidget</extends>
+   <header>pagewelcome.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ns::PageCalling</class>
+   <extends>QWidget</extends>
+   <header>pagecalling.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ns::PageFrameWindow</class>
+   <extends>QWidget</extends>
+   <header>pageframewindow.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="translator.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pushButtonSystemClose</sender>
+   <signal>clicked()</signal>
+   <receiver>ns::PhoneMainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>890</x>
+     <y>19</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>454</x>
+     <y>279</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonSystemMinimize</sender>
+   <signal>clicked()</signal>
+   <receiver>ns::PhoneMainWindow</receiver>
+   <slot>showMinimized()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>846</x>
+     <y>38</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>459</x>
+     <y>319</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

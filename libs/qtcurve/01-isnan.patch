@@ -1,0 +1,13 @@
+Index: common/colorutils.c
+===================================================================
+--- common/colorutils.c (revision 964)
++++ common/colorutils.c (working copy)
+@@ -33,7 +33,7 @@
+ 
+ #include <math.h>
+ 
+-#if defined _WIN32 && defined QT_VERSION && (QT_VERSION >= 0x040000)
++#if defined _WIN32 && defined QT_VERSION && (QT_VERSION >= 0x040000) && defined _MSC_VER
+ #include <sys/stat.h>
+ #include <float.h>
+ #include <direct.h>

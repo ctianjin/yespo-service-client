@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ns::SipPreferenceDialog</class>
+ <widget class="QDialog" name="ns::SipPreferenceDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>512</width>
+    <height>407</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>370</width>
+    <height>212</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>SIP Preference Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">* {
+	font-family: Verdana, &quot;宋体&quot;, Arial, Sans-serif, Segoe UI, Tahoma;
+}
+
+/* css of caption */
+#frameCaption {
+	background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 #0078c7, stop: 1.0 #016aae);
+	border-left: 1px solid #16232c;
+	border-top: 1px solid #16232c;
+	border-right: 1px solid #16232c;
+	border-bottom: 1px solid #0b619c;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+}
+
+#frameCaption #labelCaptionLogo {
+	background-image: url(:/images/ui/logo.png);
+	background-repeat: none;
+	background-position: center;
+	max-width: 32px;
+	min-width: 32px;
+	max-height: 32px;
+	min-height: 32px;
+}
+
+#frameCaption #labelTitle {
+	font-size: 13px;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+#frameCaption #frameSystemMenu {
+	border: 0px;
+}
+
+#frameCaption #frameSystemMenu #sysPanelContainer {
+	border: 0px;
+}
+
+#frameCaption #pushButtonClose {
+	border-image: url(:/images/ui/caption_close.png);
+}
+
+#frameCaption #pushButtonClose:hover {
+	border-image: url(:/images/ui/caption_close_hover.png);
+}
+
+#frameCaption #pushButtonClose:pressed {
+	border-image: url(:/images/ui/caption_close_pressed.png);
+}
+
+/* end of css caption */
+
+#aboutPanel {
+	border: 1px solid #BDE0F4;
+	border-radius: 3px;
+	background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 #9BD0F0, stop: 0.2 #EFF8FF);
+}
+
+#frameMain {
+	background: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #80ACCF, stop: 1.0 #F2F9FF);
+}
+
+#widgetBottom {
+	background: #E1F1FE;
+	border-top: 1px solid #FCFDFF;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+#widgetBottom #pushButtonOK {
+	border-image: url(:/images/ui/setting_ok.png) 0 3 0 3;
+	border-top: 0 transparent;
+	border-right: 3 transparent;
+	border-bottom: 0 transparent;
+	border-left: 3 transparent;
+}
+
+#widgetBottom #pushButtonOK:hover {
+	border-image: url(:/images/ui/setting_ok_hover.png) 0 3 0 3;
+}
+
+#widgetBottom #pushButtonOK:pressed {
+	border-image: url(:/images/ui/setting_ok_pressed.png) 0 3 0 3;
+}
+
+#widgetBottom #pushButtonCancel {
+	border-image: url(:/images/ui/setting_cancel.png) 0 3 0 3;
+	border-top: 0 transparent;
+	border-right: 3 transparent;
+	border-bottom: 0 transparent;
+	border-left: 3 transparent;
+}
+
+#widgetBottom #pushButtonCancel:hover {
+	border-image: url(:/images/ui/setting_cancel_hover.png) 0 3 0 3;
+}
+
+#widgetBottom #pushButtonCancel:pressed {
+	border-image: url(:/images/ui/setting_cancel_pressed.png) 0 3 0 3;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="margin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QFrame" name="frameCaption">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="margin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="labelCaptionLogo">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="labelTitle">
+        <property name="text">
+         <string>YesPo Service Client</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>68</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QFrame" name="sysPanelContainer">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>32</height>
+         </size>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="margin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QWidget" name="sysPanel" native="true">
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <property name="spacing">
+             <number>2</number>
+            </property>
+            <property name="margin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QPushButton" name="pushButtonClose">
+              <property name="minimumSize">
+               <size>
+                <width>35</width>
+                <height>36</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>35</width>
+                <height>36</height>
+               </size>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="autoDefault">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>9</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="aboutPanel">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_7">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="0,1">
+          <item>
+           <widget class="QLabel" name="labelGeneral">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>15</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>15</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>General</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="frameMain">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>1</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>1</height>
+             </size>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <property name="leftMargin">
+           <number>25</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="labelNet">
+            <property name="text">
+             <string>Transport</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <property name="leftMargin">
+             <number>20</number>
+            </property>
+            <item>
+             <widget class="QRadioButton" name="radioUdp">
+              <property name="text">
+               <string>UDP</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="radioTcp">
+              <property name="text">
+               <string>TCP</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="widgetBottom" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <property name="topMargin">
+       <number>9</number>
+      </property>
+      <property name="bottomMargin">
+       <number>9</number>
+      </property>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>351</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButtonOK">
+        <property name="minimumSize">
+         <size>
+          <width>64</width>
+          <height>21</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>64</width>
+          <height>21</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>OK</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButtonCancel">
+        <property name="minimumSize">
+         <size>
+          <width>64</width>
+          <height>21</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>64</width>
+          <height>21</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Cancel</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="translator.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pushButtonClose</sender>
+   <signal>clicked()</signal>
+   <receiver>ns::SipPreferenceDialog</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>509</x>
+     <y>12</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>184</x>
+     <y>105</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonOK</sender>
+   <signal>clicked()</signal>
+   <receiver>ns::SipPreferenceDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>390</x>
+     <y>385</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-69</x>
+     <y>-95</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonCancel</sender>
+   <signal>clicked()</signal>
+   <receiver>ns::SipPreferenceDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>477</x>
+     <y>383</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>277</x>
+     <y>-16</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

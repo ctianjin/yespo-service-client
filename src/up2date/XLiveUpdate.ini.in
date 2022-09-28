@@ -1,0 +1,6 @@
+[DEFAULT]
+VersionFileName=@FEI_PLAYER_OUTPUT_NAME@.exe
+VersionUpdateXMLURL=@FEI_UPDATE_URL@
+ProductName=FeiPlayer
+VersionDetectType=EXE
+VersionNumber=@FEI_VERSION_MAJOR@.@FEI_VERSION_MINOR@.@FEI_VERSION_PATCH@.@FEI_REVISION@

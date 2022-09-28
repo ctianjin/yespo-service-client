@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ns::TestNetworkCalculate</class>
+ <widget class="QWidget" name="ns::TestNetworkCalculate">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>285</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>500</width>
+    <height>285</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>500</width>
+    <height>285</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>YesPo Service Client</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">* {
+	font-family: Verdana, &quot;宋体&quot;, Arial, Sans-serif, Segoe UI, Tahoma;
+}
+</string>
+  </property>
+ </widget>
+ <resources>
+  <include location="translator.qrc"/>
+ </resources>
+ <connections/>
+</ui>

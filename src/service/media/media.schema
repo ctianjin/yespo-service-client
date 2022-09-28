@@ -1,0 +1,28 @@
+$type sqlite
+$name media
+$version 1.0.0
+$display_name Media
+$file_name media.dat
+
+%encoding UTF-16
+%default_cache_size 8000
+
+enum[media_status]
+{
+    not_available_status
+    waiting_status
+    downloading_status
+    paused_status
+    ready_status
+    error_status            99
+}
+
+media_photo
+{
+	id                   identity
+	download_url         string
+	status               enum[media_status]
+	total_size           string
+	available_size       string
+	fileName             string
+}

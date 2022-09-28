@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">	
+		<file>data/default.xml</file>
+        <file>style/phone.qss</file>
+        <file alias="style/phone.qss">style/phone_zh_CN.qss</file>
+    </qresource>
+</RCC>

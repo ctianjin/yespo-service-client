@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<preferences>
+    <application>
+        <language value="" />
+        <remember_exit value="false" />
+		<window_hide value="1" />
+		<host value="demo-v.qpidnetwork.com" />
+    </application>
+    <ui>
+        <login>
+            <auto_login value="false" />
+			<remember_password value="false" />
+        </login>
+        <view value="0" />
+    </ui>
+    <service>
+		<audio>
+			<audio_output value="" />
+			<audio_input value="" />
+		</audio>
+        <command>
+            <common>
+                <query>
+                    <session_id value="session" />
+                </query>
+                <key>
+                    <error_code value="error_code" />
+					<error_number value="error_num" />
+                    <error_message value="error_msg" />
+                </key>
+            </common>
+			<loadconfig>
+				<url value="http://demo-v.qpidnetwork.com/welcome/loadconfiginfoforpc" />
+				<query>
+					<last_time value="configUpTime" />
+					<reload value="isReloadConfig" />
+				</query>
+				<key>
+					<info value="configinfo">
+						<service value="serviceLangArray" />
+						<major value="majorArray" />
+						<useapp value="useAppReasonArray" />
+						<mode value="callModeArray" />
+					</info>
+					<version value="versions" />
+					<download value="downloadurl" />
+					<force_update value="ismustupgrade" />
+					<verify_code value="verifycode" />
+					<version_name value="versionname" />
+					<pstn_supported value="pstnPermitInfo" />
+					<pc_href_info value="pcHrefInfo">
+						<create_account value="register" />
+						<change_password value="changepwd" />
+						<edit_userinfo value="edituserinfo" />
+					</pc_href_info>
+				</key>
+			</loadconfig>
+			<register>
+				<url value="http://demo-v.qpidnetwork.com/welcome/register" />
+				<query>
+					<native_language value="native_language" />
+					<voicera_id value="voiceraid" />
+					<email value="email" />
+					<password value="password" />
+					<photo value="photo" />
+				</query>
+				<key>
+					<result value="result">
+						<sip_caller_id value="sip_caller_id" />
+						<nickname value="nickname" />
+						<voiceraid value="voiceraid" />
+						<native_language value="native_language" />
+						<small_photo value="small_photo" />
+						<large_photo value="large_photo" />
+					</result>
+				</key>
+			</register>
+            <login>
+                <url value="http://{host}/welcome/login" />
+                <encrypt_key value="voicera" />
+                <query>
+                    <voicera_id value="voiceraid" />
+                    <password value="password" />
+                </query>
+                <key>
+                    <result value="result">
+						<sip_caller_id value="sip_caller_id" />
+						<native_language value="native_language" />
+						<voiceraid value="voiceraid" />
+						<small_photo value="small_photo" />
+						<large_photo value="large_photo" />
+					</result>
+                </key>
+            </login>
+			<forgetpassword>
+				<url value="http://demo-v.qpidnetwork.com/welcome/changepwd1" />
+				<query>
+					<email value="email" />
+				</query>
+			</forgetpassword>
+			<contactlist>
+				<url value="http://{host}/addressbook/getcontactlist" />
+				<query>
+					<search_type value="searchtype" />
+				</query>
+				<key>
+					<contact_list value="contact_list">
+						<id value="id" />
+						<add_book_id value="add_book_id" />
+						<contact_name value="contact_name" />
+						<small_photo value="small_photo" />
+						<large_photo value="large_photo" />
+						<phone value="phone" />
+						<voicera_id value="voiceraid" />
+						<sip_caller_id value="sip_caller_id" />
+						<source_language value="source_lang" />
+						<target_language value="target_lang" />
+						<online_status value="is_online" />
+						<system_user value="is_sys_user" />
+					</contact_list>
+				</key>
+			</contactlist>
+			<addcontact>
+				<url value="http://{host}/addressbook/saveaddrbook" />
+				<query>
+					<voicera_id value="contactvoicearid" />
+					<name value="contact_name" />
+					<phone value="contact_phone" />
+					<phone_country value="contact_phone_country" />
+					<source_language value="contact_source_lang" />
+					<target_language value="contact_target_lang" />
+				</query>
+				<key>
+					<add_book_id value="add_book_id" />
+					<id value="id" />
+				</key>
+			</addcontact>
+			<updatecontact>
+				<url value="http://{host}/addressbook/updateaddrbook" />
+				<query>
+					<add_book_id value="add_book_id" />
+					<update_type value="update_type" />
+					<voicera_id value="contactvoicearid" />
+					<name value="contact_name" />
+					<phone value="contact_phone" />
+					<old_phone value="oldphone" />
+					<phone_country value="contact_phone_country" />
+					<delete_phone value="del_phone" />
+					<source_language value="contact_source_lang" />
+					<target_language value="contact_target_lang" />
+				</query>
+			</updatecontact>
+			<delcontact>
+				<url value="http://{host}/addressbook/delcontact" />
+				<query>
+					<add_book_id value="add_book_id" />
+				</query>
+			</delcontact>
+			<detailcontact>
+				<url value="http://{host}/addressbook/getdetailbook" />
+				<query>
+					<add_book_id value="add_book_id" />
+				</query>
+				<key>
+					<info value="contactinfo">
+						<native_language value="native_language" />
+						<nickname value="nickname" />
+						<country value="country" />
+						<major value="major" />
+					</info>
+				</key>
+			</detailcontact>
+			<gethistorycdr>
+				<url value="http://{host}/cdrhistory/gethistorycdr" />
+				<query>
+					<history_type value="historytype" />
+				</query>
+				<key>
+					<list value="cdrlist">
+						<id value="id" />
+						<meet_cdr_id value="meet_cdr_id" />
+						<callee_id value="calleeid" />
+						<source_language value="sourcelang" />
+						<target_language value="targetlang" />
+						<calling_time value="calling_time" />
+						<cost value="cost" />
+						<is_success value="issuccess" />
+						<is_callout value="is_callout" />
+					</list>
+				</key>
+			</gethistorycdr>
+			<getuserinfo>
+				<url value="http://{host}/user/getuserinfo" />
+				<query>
+					<voicera_id value="voiceraid" />
+				</query>
+				<key>
+					<info value="userinfo">
+						<email value="email" />
+						<voicera_id value="voiceraid" />
+						<sip_caller_id value="sip_caller_id" />
+						<account_balance value="account_balance" />
+						<nickname value="nickname" />
+						<native_language value="native_language" />
+						<major value="major" />
+						<country value="country" />
+						<small_photo value="small_photo" />
+						<large_photo value="large_photo" />
+						<online_status value="is_online" />
+					</info>
+				</key>
+			</getuserinfo>
+			<edituserinfo>
+				<url value="http://{host}/user/edituserinfo" />
+				<query>
+					<nickname value="edit_nickname" />
+					<native_language value="edit_nationlang" />
+					<nationality value="edit_nationality" />
+					<major value="edit_major" />
+					<online_visible_status value="edit_onlie_visible_status" />
+					<photo value="photo" />
+					<update_type value="update_type" />
+				</query>
+			</edituserinfo>
+			<changepassword>
+				<url value="http://{host}/welcome/changepwd2" />
+				<query>
+					<auth_code value="authcode" />
+					<email value="email" />
+				</query>
+			</changepassword>
+			<newpassword>
+				<url value="http://{host}/welcome/changepwd3/newpwd1" />
+				<query>
+					<new_password1 value="newpwd1" />
+					<new_password2 value="newpwd2" />
+					<auth_code value="authcode" />
+					<email value="email" />
+				</query>
+			</newpassword>
+			<getcdrid>
+				<url value="http://{host}/cdrhistory/getcdrid" />
+				<query>
+					<cdr_id value="cdrid" />
+				</query>
+				<key>
+					<info value="cdrinfo">
+						<id value="id" />
+						<caller_id value="caller_id" />
+						<deduction_time value="deduction_time" />
+						<meet_cdr_id value="meet_cdr_id" />
+						<call_time value="call_time" />
+						<contact_name value="contact_name" />
+						<small_photo value="small_photo" />
+						<large_photo value="large_photo" />
+						<call_status value="call_status" />
+						<call_mode value="call_mode" />
+						<deduction_cost value="deduction_cost" />
+						<source_language value="source_language" />
+						<target_language value="target_language" />
+						<pstn_country value="pstn_country" />
+						<voicera_id value="voiceraid" />
+					</info>
+				</key>
+			</getcdrid>
+			<delcdr>
+				<url value="http://{host}/cdrhistory/delcdr" />
+				<query>
+					<meet_cdr_id value="meet_cdr_id" />
+				</query>
+			</delcdr>
+        </command>
+		<media>
+			<download>
+				<file_block_size value="1024" />
+			</download>
+		</media>
+    </service>
+</preferences>

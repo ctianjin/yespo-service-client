@@ -1,0 +1,837 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ns::AudioNavigateDialog</class>
+ <widget class="QDialog" name="ns::AudioNavigateDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>952</width>
+    <height>672</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>952</width>
+    <height>672</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>952</width>
+    <height>672</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>YesPo Service Client</string>
+  </property>
+  <property name="windowOpacity">
+   <double>1.000000000000000</double>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">* {
+	font-family: Verdana, &quot;宋体&quot;, Arial, Sans-serif, Segoe UI, Tahoma;
+}
+#widgetOuter {
+	border: 1px solid #17242D;
+	border-radius: 4px;
+}
+
+#widgetInner {
+	background: transparent;
+/*	border: 1px solid rgba(88,168,219,249);*/
+	border-radius: 4px;
+}
+
+/* css of caption */
+#frameCaption {
+	background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 #0078c7, stop: 1.0 #016aae);
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	border-top: 1px solid #57A3D3;
+	border-left: 1px solid #57A3D3;
+	border-right: 1px solid #57A3D3;
+    border-bottom: 1px solid #015c97;
+}
+
+#frameCaption #labelCaptionLogo {
+	background-image: url(:/images/ui/logo.png);
+	background-repeat: none;
+	background-position: center;
+	max-width: 32px;
+	min-width: 32px;
+	max-height: 32px;
+	min-height: 32px;
+}
+
+#frameCaption #labelCaptionTitle {
+	font-size: 13px;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+#frameCaption #frameSystemMenu {
+	border: 0px;
+}
+
+#frameCaption #frameSystemMenu #sysPanelContainer {
+	border: 0px;
+}
+
+#frameCaption #pushButtonSystemClose {
+	border-image: url(:/images/ui/caption_close.png);
+}
+
+#frameCaption #pushButtonSystemClose:hover {
+	border-image: url(:/images/ui/caption_close_hover.png);
+}
+
+#frameCaption #pushButtonSystemClose:pressed {
+	border-image: url(:/images/ui/caption_close_pressed.png);
+}
+
+/* end of css caption */
+
+/*#stackedWidgetTest {
+	border-bottom : 1px solid;
+}*/
+
+#window #widgetMain #stackedWidgetTest {
+	border-bottom : 1px solid  #eff4f6;
+}
+
+#widgetWizardPanel {
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+
+	background: #F8FCFF;
+}
+
+#widgetTitle {
+	background: #f2f9ff;
+}
+
+#widgetTitle #labelHint1 {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#widgetTitle #labelHint2 {
+	font-size: 12px;
+	color: #333333;
+}
+
+#widgetTab #labelTabForwardNetwork {
+	background-image: url(:/images/ui/test_forward_active_left.png);
+}
+
+#labelTabForwardStart,#labelTabForwardVoice,#labelTabForwardCamera {
+	background-image: url(:/images/ui/test_forward_inactive.png);
+}
+
+#widgetTab QPushButton {
+	border: 0px;
+	background : #eeeeee;
+	color :  #555555;
+}
+
+#widgetTab QPushButton:checked {
+	background: #4db800;
+	color: #ffffff;
+	font-weight : bold;
+}
+
+#widgetWizardPanel {
+	background: #f7fcff;
+}
+
+#widgetWizardPanel QTextBrowser {
+	background: transparent;
+	border: 0px;
+}
+
+#widgetWizardPanel QPushButton {
+	min-width: 134px;
+	min-height: 36px;
+	max-width: 134px;
+	max-height: 36px;
+	color: #ffffff;
+	font-size: 17px;
+	font-weight : bold;
+}
+
+#pushButtonTestStart,#pushButtonStopTest,#pushButtonNext,#pushButtonReTest {
+	border-image: url(:/images/ui/test_next.png) 0 3 0 3;
+	border-top: 0px transparent;
+	border-right: 3px transparent;
+	border-bottom: 0px transparent;
+	border-left: 3px transparent;
+}
+
+#pushButtonTestStart:hover,#pushButtonStopTest:hover,#pushButtonNext:hover,#pushButtonReTest:hover {
+	border-image: url(:/images/ui/test_next_hover.png) 0 3 0 3;
+}
+
+#pushButtonTestStart:pressed,#pushButtonStopTest:pressed,#pushButtonNext:pressed,#pushButtonReTest:pressed {
+	border-image: url(:/images/ui/test_next_pressed.png) 0 3 0 3;
+}
+
+#pushButtonPrev {
+	border-image: url(:/images/ui/test_prev.png) 0 3 0 3;
+	border-top: 0px transparent;
+	border-right: 3px transparent;
+	border-bottom: 0px transparent;
+	border-left: 3px transparent;
+}
+
+#pushButtonPrev:hover {
+	border-image: url(:/images/ui/test_prev_hover.png) 0 3 0 3;
+}
+
+#pushButtonPrev:pressed {
+	border-image: url(:/images/ui/test_prev_pressed.png) 0 3 0 3;
+}
+
+#pushButtonTestFinish {
+	border-image: url(:/images/ui/test_finished.png) 0 3 0 3;
+	border-top: 0px transparent;
+	border-right: 3px transparent;
+	border-bottom: 0px transparent;
+	border-left: 3px transparent;
+}
+
+#pushButtonTestFinish:hover {
+	border-image: url(:/images/ui/test_finished_hover.png) 0 3 0 3;
+}
+
+#pushButtonTestFinish:pressed {
+	border-image: url(:/images/ui/test_finished_pressed.png) 0 3 0 3;
+}
+#widgetTab #tabNetQuality,#tabAudioStart {
+	font-weight:blod;
+}
+#line {
+	border : 1px solid #eff4f6;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_3">
+   <property name="margin">
+    <number>35</number>
+   </property>
+   <item>
+    <widget class="QWidget" name="widgetOuter" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>880</width>
+       <height>600</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>880</width>
+       <height>600</height>
+      </size>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <property name="margin">
+       <number>1</number>
+      </property>
+      <item>
+       <widget class="QWidget" name="widgetInner" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>878</width>
+          <height>598</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>878</width>
+          <height>598</height>
+         </size>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_6">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="margin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QFrame" name="frameCaption">
+           <property name="minimumSize">
+            <size>
+             <width>876</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <property name="spacing">
+             <number>6</number>
+            </property>
+            <property name="margin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="labelCaptionLogo">
+              <property name="minimumSize">
+               <size>
+                <width>32</width>
+                <height>32</height>
+               </size>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelCaptionTitle">
+              <property name="text">
+               <string>YesPo Service Client</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>68</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QFrame" name="frameSystemMenu">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <property name="margin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QFrame" name="sysPanelContainer">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <layout class="QHBoxLayout" name="horizontalLayout">
+                  <property name="spacing">
+                   <number>0</number>
+                  </property>
+                  <property name="margin">
+                   <number>0</number>
+                  </property>
+                  <item>
+                   <widget class="QPushButton" name="pushButtonSystemClose">
+                    <property name="minimumSize">
+                     <size>
+                      <width>35</width>
+                      <height>36</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="cursor">
+                     <cursorShape>PointingHandCursor</cursorShape>
+                    </property>
+                    <property name="focusPolicy">
+                     <enum>Qt::NoFocus</enum>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <spacer name="verticalSpacer">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+           <zorder>labelCaptionTitle</zorder>
+           <zorder>labelCaptionLogo</zorder>
+           <zorder>frameSystemMenu</zorder>
+          </widget>
+         </item>
+         <item>
+          <widget class="QWidget" name="widgetMain" native="true">
+           <layout class="QVBoxLayout" name="verticalLayout_5">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="margin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QWidget" name="widgetTitle" native="true">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>71</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>71</height>
+               </size>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_4">
+               <property name="spacing">
+                <number>3</number>
+               </property>
+               <property name="leftMargin">
+                <number>20</number>
+               </property>
+               <property name="topMargin">
+                <number>20</number>
+               </property>
+               <property name="bottomMargin">
+                <number>15</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="labelHint1">
+                 <property name="text">
+                  <string>Device Test ( Very Important )</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="labelHint2">
+                 <property name="text">
+                  <string>Reset your device and close all running applications prior to upgrade</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QWidget" name="widgetTab" native="true">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>30</height>
+               </size>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_3">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <property name="margin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QPushButton" name="tabNetQuality">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Network</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="labelTabForwardNetwork">
+                 <property name="minimumSize">
+                  <size>
+                   <width>19</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>19</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="tabAudioStart">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Start</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                 <property name="checked">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="labelTabForwardStart">
+                 <property name="minimumSize">
+                  <size>
+                   <width>19</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>19</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="tabVoice">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Voice</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="labelTabForwardVoice">
+                 <property name="minimumSize">
+                  <size>
+                   <width>19</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>19</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="tabCamera">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Camera</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="labelTabForwardCamera">
+                 <property name="minimumSize">
+                  <size>
+                   <width>19</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>19</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="tabAudioFinish">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Result</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QStackedWidget" name="stackedWidgetTest">
+              <widget class="ns::TestNetwork" name="testNetwork"/>
+              <widget class="ns::TestDeviceStart" name="testDeviceStart"/>
+              <widget class="ns::TestVoice" name="testVoice"/>
+              <widget class="ns::TestCamera" name="testCamera"/>
+              <widget class="ns::TestDeviceFinished" name="testDeviceFinished"/>
+             </widget>
+            </item>
+            <item>
+             <widget class="QWidget" name="widgetWizardPanel" native="true">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>59</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>59</height>
+               </size>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,0,0,0,0,0,0,0">
+               <item>
+                <widget class="QTextBrowser" name="textBrowserHint">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>23</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>23</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_2">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>6</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButtonTestStart">
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
+                 <property name="text">
+                  <string>Start test</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButtonStopTest">
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
+                 <property name="text">
+                  <string>Stop test</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButtonPrev">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="text">
+                  <string>Previous</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButtonNext">
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
+                 <property name="text">
+                  <string>Next</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButtonTestFinish">
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
+                 <property name="text">
+                  <string>Finished</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButtonReTest">
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
+                 <property name="text">
+                  <string>Test again</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ns::TestNetwork</class>
+   <extends>QWidget</extends>
+   <header>testnetwork.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ns::TestDeviceStart</class>
+   <extends>QWidget</extends>
+   <header>testdevicestart.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ns::TestVoice</class>
+   <extends>QWidget</extends>
+   <header>testvoice.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ns::TestCamera</class>
+   <extends>QWidget</extends>
+   <header>testcamera.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ns::TestDeviceFinished</class>
+   <extends>QWidget</extends>
+   <header>testdevicefinished.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="translator.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pushButtonSystemClose</sender>
+   <signal>clicked()</signal>
+   <receiver>ns::AudioNavigateDialog</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>895</x>
+     <y>19</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>457</x>
+     <y>269</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <signal>loginStarted()</signal>
+  <signal>loginSucceeded()</signal>
+  <signal>loginFailed()</signal>
+  <slot>login()</slot>
+ </slots>
+</ui>

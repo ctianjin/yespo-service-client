@@ -1,0 +1,15 @@
+/* $Id: default.qss 4 2012-07-27 12:29:39Z twu $ */
+/*
+ * Copyright (C) 2011 China Science & Intelligence Information Technology Co.,Ltd.
+ * All rights reserved.
+ *
+ * Contact: Development Department <devel@cnsiit.com>
+ * Author: Joseph Wu <twu@cnsiit.com>
+ */
+
+/*
+* {
+    font-family: Sans-serif, Segoe UI, Tahoma;
+    font-size: 9pt;
+}
+*/

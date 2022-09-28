@@ -1,0 +1,57 @@
+#
+# Available attributes
+#    $type ### database type: sqlite oracle
+#    $name ### database name
+#    $version ### major.minor.patch
+#    $display_name ### database display name
+#    $file_name ### database file name, defaults to $name.dat (UTF-8 encoded)
+#               ### set to :memory: for in-memory database
+#
+# Available pragmas
+#    %encoding ### database encoding
+#    %default_cache_size ### database default cache size
+#
+
+#
+# Available types
+#    identity ### identity implies primary_key
+#    int
+#    uint
+#    int64
+#    uint64
+#    float
+#    double
+#    real
+#    bool # bool[yn] for Y/N values(string), bool[10] for 1/0 values(integer)
+#    asciistring
+#    string
+#    stringlist # stringlist[...] for seperator, default is |
+#    date
+#    time
+#    datetime
+#    time_t
+#    url
+#    clob
+#    blob
+#    variant
+#
+#    struct[...]
+#    enum[...]
+#
+
+#
+# Available type attributes
+#
+# primary_key unique not_null nocase default=xx readonly sort sort=(1..n) asc desc
+# is has (for bool value, generate isXxx or hasXxx for getter)
+# in_place (for struct, not prefixing field name to individual field names)
+# tree_id tree_parent_id
+#
+
+###$name
+###$version
+###$display_name
+###$file_name
+
+###%encoding
+###%default_cache_size

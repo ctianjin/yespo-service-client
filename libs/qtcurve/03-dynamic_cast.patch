@@ -1,0 +1,123 @@
+Index: style/qtcurve.cpp
+===================================================================
+--- style/qtcurve.cpp   (revision 968)
++++ style/qtcurve.cpp   (working copy)
+@@ -692,15 +692,6 @@
+ }
+ #endif
+ 
+-class QtCurveDockWidgetTitleBar : public QWidget
+-{
+-    public:
+-
+-    QtCurveDockWidgetTitleBar(QWidget* parent) : QWidget(parent) { }
+-    virtual ~QtCurveDockWidgetTitleBar() { }
+-    QSize sizeHint() const { return QSize(0, 0); }
+-};
+-
+ class StylePlugin : public QStylePlugin
+ {
+     public:
+@@ -2575,7 +2566,7 @@
+     }
+     else if(qobject_cast<QDockWidget *>(widget) &&
+             ((QDockWidget *)widget)->titleBarWidget() &&
+-            dynamic_cast<QtCurveDockWidgetTitleBar *>(((QDockWidget *)widget)->titleBarWidget()) &&
++            qobject_cast<QtCurveDockWidgetTitleBar *>(((QDockWidget *)widget)->titleBarWidget()) &&
+             widget->parentWidget() &&
+             widget->parentWidget()->parentWidget() &&
+             widget->parentWidget()->parentWidget()->parentWidget() &&
+@@ -2701,11 +2692,16 @@
+     return false;
+ }
+ 
++static inline bool isMouseEvent(QEvent* event)
++{
++    return event->type() >= QEvent::MouseButtonPress && event->type() <= QEvent::MouseMove;
++}
++
+ bool Style::eventFilter(QObject *object, QEvent *event)
+ {
+     bool isSViewCont=APP_KONTACT==theThemedApp && itsSViewContainers.contains((QWidget*)object);
+ 
+-    if(::qobject_cast<QMenuBar *>(object) && dynamic_cast<QMouseEvent *>(event))
++    if(::qobject_cast<QMenuBar *>(object) && isMouseEvent(event))
+     {
+         if(updateMenuBarEvent((QMouseEvent *)event, (QMenuBar*)object))
+             return true;
+@@ -3008,7 +3004,7 @@
+             break;
+         }
+         case QEvent::MouseButtonPress:
+-            if(dynamic_cast<QMouseEvent*>(event) && qobject_cast<QLabel*>(object) && ((QLabel *)object)->buddy())
++            if(qobject_cast<QLabel*>(object) && ((QLabel *)object)->buddy())
+             {
+                 QLabel      *lbl = (QLabel *)object;
+                 QMouseEvent *mev = (QMouseEvent *)event;
+@@ -3021,7 +3017,7 @@
+             }
+             break;
+         case QEvent::MouseButtonRelease:
+-            if(dynamic_cast<QMouseEvent*>(event) && qobject_cast<QLabel*>(object) && ((QLabel *)object)->buddy())
++            if(qobject_cast<QLabel*>(object) && ((QLabel *)object)->buddy())
+             {
+                 QLabel      *lbl = (QLabel *)object;
+                 QMouseEvent *mev = (QMouseEvent *)event;
+@@ -3148,7 +3144,7 @@
+             break;
+         case QEvent::MouseMove:  // Only occurs for widgets with mouse tracking enabled
+         {
+-            QMouseEvent *me = dynamic_cast<QMouseEvent*>(event);
++            QMouseEvent *me = static_cast<QMouseEvent*>(event);
+ 
+             if(me && itsHoverWidget && object->isWidgetType() && object->inherits("Q3Header"))
+             {
+Index: style/qtcurve.h
+===================================================================
+--- style/qtcurve.h (revision 968)
++++ style/qtcurve.h (working copy)
+@@ -68,6 +68,17 @@
+     class ShadowHelper;
+ #endif
+ 
++class QtCurveDockWidgetTitleBar : public QWidget
++{
++    Q_OBJECT
++
++    public:
++
++    QtCurveDockWidgetTitleBar(QWidget* parent) : QWidget(parent) { }
++    virtual ~QtCurveDockWidgetTitleBar() { }
++    QSize sizeHint() const { return QSize(0, 0); }
++};
++
+ class Style : public QCommonStyle
+ {
+     Q_OBJECT
+@@ -88,7 +99,7 @@
+         MENU_BAR,
+         MENU_COMBO
+     };
+-    
++
+     enum CustomElements
+     {
+         CE_QtC_KCapacityBar = CE_CustomBase+0x00FFFF00,
+@@ -102,7 +113,7 @@
+         PREVIEW_MDI,
+         PREVIEW_WINDOW
+     };
+-    
++
+     class PreviewOption : public QStyleOption
+     {
+         public:
+@@ -140,7 +151,7 @@
+ #endif
+ 
+     ~Style();
+-    
++
+     void init(bool initial);
+     void freeColor(QSet<QColor *> &freedColors, QColor **cols);
+     void freeColors();

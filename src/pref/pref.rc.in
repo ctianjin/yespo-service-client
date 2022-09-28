@@ -1,0 +1,30 @@
+#include "winver.h"
+
+VS_VERSION_INFO VERSIONINFO
+    FILEVERSION @BUILDSYS_VERSION_MAJOR@,@BUILDSYS_VERSION_MINOR@,@BUILDSYS_VERSION_PATCH@,@BUILDSYS_REVISION@
+    PRODUCTVERSION @BUILDSYS_VERSION_MAJOR@,@BUILDSYS_VERSION_MINOR@,@BUILDSYS_VERSION_PATCH@,@BUILDSYS_REVISION@
+    FILEFLAGSMASK 0x17L
+    FILEFLAGS 0x0L
+    FILEOS 0x40004L
+    FILETYPE 0x2L
+    FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "CompanyName", "RAR Limited"
+            VALUE "FileDescription", "@BUILDSYS_PRODUCT_NAME@ Preference Module"
+            VALUE "FileVersion", "@BUILDSYS_VERSION@.@BUILDSYS_REVISION@"
+            VALUE "InternalName", "@BUILDSYS_PREF_OUTPUT_NAME@"
+            VALUE "LegalCopyright", "Copyright © 2014 RAR Limited"
+            VALUE "OriginalFilename", "@BUILDSYS_PREF_OUTPUT_NAME@.dll"
+            VALUE "ProductName", "@BUILDSYS_PRODUCT_NAME@"
+            VALUE "ProductVersion", "@BUILDSYS_VERSION@.@BUILDSYS_REVISION@"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200
+    END
+END

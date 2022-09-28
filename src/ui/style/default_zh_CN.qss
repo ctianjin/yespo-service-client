@@ -1,0 +1,12 @@
+/* $Id: default_zh_CN.qss 407 2012-12-28 10:40:05Z twu $ */
+/*
+ * Copyright (C) 2011 China Science & Intelligence Information Technology Co.,Ltd.
+ * All rights reserved.
+ *
+ * Contact: Development Department <devel@cnsiit.com>
+ * Author: Joseph Wu <twu@cnsiit.com>
+ */
+
+* {
+    font-size: 9pt;
+}
